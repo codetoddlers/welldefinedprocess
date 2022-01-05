@@ -1,0 +1,631 @@
+ ____                                 ____      _        _             
+|  _ \ _ __ ___   ___ ___  ___ ___   / ___|__ _| |_ __ _| | ___   __ _ 
+| |_) | '__/ _ \ / __/ _ \/ __/ __| | |   / _` | __/ _` | |/ _ \ / _` |
+|  __/| | | (_) | (_|  __/\__ \__ \ | |__| (_| | || (_| | | (_) | (_| |
+|_|   |_|  \___/ \___\___||___/___/  \____\__,_|\__\__,_|_|\___/ \__, |
+                                                                 |___/ 
+
+2021-05-23 07:03:48.101  INFO 5464 --- [  restartedMain] o.p.d.ProcessCatalogApplication          : Starting ProcessCatalogApplication using Java 11 on LAPTOP-9A4SC2Q5 with PID 5464 (E:\work\springbootprototypes\entity\target\classes started by myfri in E:\work\springbootprototypes\entity)
+2021-05-23 07:03:48.104  INFO 5464 --- [  restartedMain] o.p.d.ProcessCatalogApplication          : No active profile set, falling back to default profiles: default
+2021-05-23 07:03:48.172  INFO 5464 --- [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-05-23 07:03:49.579  INFO 5464 --- [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-05-23 07:03:49.664  INFO 5464 --- [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 72 ms. Found 2 JPA repository interfaces.
+2021-05-23 07:03:50.636  INFO 5464 --- [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-05-23 07:03:50.674  INFO 5464 --- [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-05-23 07:03:50.675  INFO 5464 --- [  restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.44]
+2021-05-23 07:03:50.818  INFO 5464 --- [  restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-05-23 07:03:50.819  INFO 5464 --- [  restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2645 ms
+2021-05-23 07:03:51.122  INFO 5464 --- [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-05-23 07:03:51.251  INFO 5464 --- [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-05-23 07:03:51.260  INFO 5464 --- [  restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:26ed569e-aa20-4683-8707-410917eb7a6c'
+2021-05-23 07:03:51.446 DEBUG 5464 --- [  restartedMain] o.s.b.w.s.ServletContextInitializerBeans : Mapping filters: filterRegistrationBean urls=[/*] order=-2147483647, characterEncodingFilter urls=[/*] order=-2147483648, formContentFilter urls=[/*] order=-9900, requestContextFilter urls=[/*] order=-105
+2021-05-23 07:03:51.446 DEBUG 5464 --- [  restartedMain] o.s.b.w.s.ServletContextInitializerBeans : Mapping servlets: dispatcherServlet urls=[/], webServlet urls=[/h2-console/*]
+2021-05-23 07:03:51.586  INFO 5464 --- [  restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-05-23 07:03:51.630  INFO 5464 --- [  restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.29.Final
+2021-05-23 07:03:51.733  INFO 5464 --- [  restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-05-23 07:03:51.829  INFO 5464 --- [  restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-05-23 07:03:52.603 DEBUG 5464 --- [  restartedMain] org.hibernate.SQL                        : 
+    
+    drop table if exists item CASCADE 
+Hibernate: 
+    
+    drop table if exists item CASCADE 
+2021-05-23 07:03:52.605 DEBUG 5464 --- [  restartedMain] org.hibernate.SQL                        : 
+    
+    drop table if exists phase CASCADE 
+Hibernate: 
+    
+    drop table if exists phase CASCADE 
+2021-05-23 07:03:52.606 DEBUG 5464 --- [  restartedMain] org.hibernate.SQL                        : 
+    
+    drop table if exists phase_approach CASCADE 
+Hibernate: 
+    
+    drop table if exists phase_approach CASCADE 
+2021-05-23 07:03:52.606 DEBUG 5464 --- [  restartedMain] org.hibernate.SQL                        : 
+    
+    drop table if exists phase_inputs CASCADE 
+Hibernate: 
+    
+    drop table if exists phase_inputs CASCADE 
+2021-05-23 07:03:52.606 DEBUG 5464 --- [  restartedMain] org.hibernate.SQL                        : 
+    
+    drop table if exists phase_objectives CASCADE 
+Hibernate: 
+    
+    drop table if exists phase_objectives CASCADE 
+2021-05-23 07:03:52.606 DEBUG 5464 --- [  restartedMain] org.hibernate.SQL                        : 
+    
+    drop table if exists phase_outputs CASCADE 
+Hibernate: 
+    
+    drop table if exists phase_outputs CASCADE 
+2021-05-23 07:03:52.607 DEBUG 5464 --- [  restartedMain] org.hibernate.SQL                        : 
+    
+    drop table if exists phase_steps CASCADE 
+Hibernate: 
+    
+    drop table if exists phase_steps CASCADE 
+2021-05-23 07:03:52.607 DEBUG 5464 --- [  restartedMain] org.hibernate.SQL                        : 
+    
+    drop table if exists process_definition CASCADE 
+Hibernate: 
+    
+    drop table if exists process_definition CASCADE 
+2021-05-23 07:03:52.607 DEBUG 5464 --- [  restartedMain] org.hibernate.SQL                        : 
+    
+    drop sequence if exists hibernate_sequence
+Hibernate: 
+    
+    drop sequence if exists hibernate_sequence
+2021-05-23 07:03:52.611 DEBUG 5464 --- [  restartedMain] org.hibernate.SQL                        : create sequence hibernate_sequence start with 1 increment by 1
+Hibernate: create sequence hibernate_sequence start with 1 increment by 1
+2021-05-23 07:03:52.614 DEBUG 5464 --- [  restartedMain] org.hibernate.SQL                        : 
+    
+    create table item (
+       type varchar(20) not null,
+        id bigint not null,
+        active boolean,
+        created_date timestamp,
+        deactivated_date timestamp,
+        name varchar(255),
+        sequence_number integer,
+        primary key (id)
+    )
+Hibernate: 
+    
+    create table item (
+       type varchar(20) not null,
+        id bigint not null,
+        active boolean,
+        created_date timestamp,
+        deactivated_date timestamp,
+        name varchar(255),
+        sequence_number integer,
+        primary key (id)
+    )
+2021-05-23 07:03:52.623 DEBUG 5464 --- [  restartedMain] org.hibernate.SQL                        : 
+    
+    create table phase (
+       id bigint not null,
+        active boolean,
+        created_date timestamp,
+        deactivated_date timestamp,
+        name varchar(255),
+        sequence_number integer,
+        description varchar(255),
+        process_id bigint,
+        primary key (id)
+    )
+Hibernate: 
+    
+    create table phase (
+       id bigint not null,
+        active boolean,
+        created_date timestamp,
+        deactivated_date timestamp,
+        name varchar(255),
+        sequence_number integer,
+        description varchar(255),
+        process_id bigint,
+        primary key (id)
+    )
+2021-05-23 07:03:52.624 DEBUG 5464 --- [  restartedMain] org.hibernate.SQL                        : 
+    
+    create table phase_approach (
+       phase_id bigint not null,
+        approach_id bigint not null
+    )
+Hibernate: 
+    
+    create table phase_approach (
+       phase_id bigint not null,
+        approach_id bigint not null
+    )
+2021-05-23 07:03:52.625 DEBUG 5464 --- [  restartedMain] org.hibernate.SQL                        : 
+    
+    create table phase_inputs (
+       phase_id bigint not null,
+        inputs_id bigint not null
+    )
+Hibernate: 
+    
+    create table phase_inputs (
+       phase_id bigint not null,
+        inputs_id bigint not null
+    )
+2021-05-23 07:03:52.626 DEBUG 5464 --- [  restartedMain] org.hibernate.SQL                        : 
+    
+    create table phase_objectives (
+       phase_id bigint not null,
+        objectives_id bigint not null
+    )
+Hibernate: 
+    
+    create table phase_objectives (
+       phase_id bigint not null,
+        objectives_id bigint not null
+    )
+2021-05-23 07:03:52.626 DEBUG 5464 --- [  restartedMain] org.hibernate.SQL                        : 
+    
+    create table phase_outputs (
+       phase_id bigint not null,
+        outputs_id bigint not null
+    )
+Hibernate: 
+    
+    create table phase_outputs (
+       phase_id bigint not null,
+        outputs_id bigint not null
+    )
+2021-05-23 07:03:52.627 DEBUG 5464 --- [  restartedMain] org.hibernate.SQL                        : 
+    
+    create table phase_steps (
+       phase_id bigint not null,
+        steps_id bigint not null
+    )
+Hibernate: 
+    
+    create table phase_steps (
+       phase_id bigint not null,
+        steps_id bigint not null
+    )
+2021-05-23 07:03:52.628 DEBUG 5464 --- [  restartedMain] org.hibernate.SQL                        : 
+    
+    create table process_definition (
+       id bigint not null,
+        active boolean,
+        created_date timestamp,
+        deactivated_date timestamp,
+        name varchar(255),
+        sequence_number integer,
+        primary key (id)
+    )
+Hibernate: 
+    
+    create table process_definition (
+       id bigint not null,
+        active boolean,
+        created_date timestamp,
+        deactivated_date timestamp,
+        name varchar(255),
+        sequence_number integer,
+        primary key (id)
+    )
+2021-05-23 07:03:52.630 DEBUG 5464 --- [  restartedMain] org.hibernate.SQL                        : 
+    
+    alter table phase_approach 
+       add constraint UK_m8yg932ksiidg9xr9odu2hkgn unique (approach_id)
+Hibernate: 
+    
+    alter table phase_approach 
+       add constraint UK_m8yg932ksiidg9xr9odu2hkgn unique (approach_id)
+2021-05-23 07:03:52.635 DEBUG 5464 --- [  restartedMain] org.hibernate.SQL                        : 
+    
+    alter table phase_inputs 
+       add constraint UK_rh500wbtlh246btu3phj0p14o unique (inputs_id)
+Hibernate: 
+    
+    alter table phase_inputs 
+       add constraint UK_rh500wbtlh246btu3phj0p14o unique (inputs_id)
+2021-05-23 07:03:52.636 DEBUG 5464 --- [  restartedMain] org.hibernate.SQL                        : 
+    
+    alter table phase_objectives 
+       add constraint UK_aht7gdbdd6oavtyl0pa8fnpw7 unique (objectives_id)
+Hibernate: 
+    
+    alter table phase_objectives 
+       add constraint UK_aht7gdbdd6oavtyl0pa8fnpw7 unique (objectives_id)
+2021-05-23 07:03:52.637 DEBUG 5464 --- [  restartedMain] org.hibernate.SQL                        : 
+    
+    alter table phase_outputs 
+       add constraint UK_cis9k50hw2jyvv50lb3vmjb4a unique (outputs_id)
+Hibernate: 
+    
+    alter table phase_outputs 
+       add constraint UK_cis9k50hw2jyvv50lb3vmjb4a unique (outputs_id)
+2021-05-23 07:03:52.638 DEBUG 5464 --- [  restartedMain] org.hibernate.SQL                        : 
+    
+    alter table phase_steps 
+       add constraint UK_jyycr73rqj9eyuur5lqjrsnir unique (steps_id)
+Hibernate: 
+    
+    alter table phase_steps 
+       add constraint UK_jyycr73rqj9eyuur5lqjrsnir unique (steps_id)
+2021-05-23 07:03:52.639 DEBUG 5464 --- [  restartedMain] org.hibernate.SQL                        : 
+    
+    alter table phase 
+       add constraint FK8ltfwy6emebvxba8do8hvv78b 
+       foreign key (process_id) 
+       references process_definition
+Hibernate: 
+    
+    alter table phase 
+       add constraint FK8ltfwy6emebvxba8do8hvv78b 
+       foreign key (process_id) 
+       references process_definition
+2021-05-23 07:03:52.649 DEBUG 5464 --- [  restartedMain] org.hibernate.SQL                        : 
+    
+    alter table phase_approach 
+       add constraint FKjssqk2xnnypr2lnuvw7qy5tx5 
+       foreign key (approach_id) 
+       references item
+Hibernate: 
+    
+    alter table phase_approach 
+       add constraint FKjssqk2xnnypr2lnuvw7qy5tx5 
+       foreign key (approach_id) 
+       references item
+2021-05-23 07:03:52.651 DEBUG 5464 --- [  restartedMain] org.hibernate.SQL                        : 
+    
+    alter table phase_approach 
+       add constraint FK61kr7s56a5t0xx09r1hu2rumg 
+       foreign key (phase_id) 
+       references phase
+Hibernate: 
+    
+    alter table phase_approach 
+       add constraint FK61kr7s56a5t0xx09r1hu2rumg 
+       foreign key (phase_id) 
+       references phase
+2021-05-23 07:03:52.653 DEBUG 5464 --- [  restartedMain] org.hibernate.SQL                        : 
+    
+    alter table phase_inputs 
+       add constraint FKabakysd50cyky5pbmw4i9iyfm 
+       foreign key (inputs_id) 
+       references item
+Hibernate: 
+    
+    alter table phase_inputs 
+       add constraint FKabakysd50cyky5pbmw4i9iyfm 
+       foreign key (inputs_id) 
+       references item
+2021-05-23 07:03:52.654 DEBUG 5464 --- [  restartedMain] org.hibernate.SQL                        : 
+    
+    alter table phase_inputs 
+       add constraint FKqufkp5y96mwoqm9e1mnbho2ul 
+       foreign key (phase_id) 
+       references phase
+Hibernate: 
+    
+    alter table phase_inputs 
+       add constraint FKqufkp5y96mwoqm9e1mnbho2ul 
+       foreign key (phase_id) 
+       references phase
+2021-05-23 07:03:52.656 DEBUG 5464 --- [  restartedMain] org.hibernate.SQL                        : 
+    
+    alter table phase_objectives 
+       add constraint FKimvyw7f5qengxym5om2nvfpfk 
+       foreign key (objectives_id) 
+       references item
+Hibernate: 
+    
+    alter table phase_objectives 
+       add constraint FKimvyw7f5qengxym5om2nvfpfk 
+       foreign key (objectives_id) 
+       references item
+2021-05-23 07:03:52.658 DEBUG 5464 --- [  restartedMain] org.hibernate.SQL                        : 
+    
+    alter table phase_objectives 
+       add constraint FKiqgjby1whm5eixjyqrm9wsdw9 
+       foreign key (phase_id) 
+       references phase
+Hibernate: 
+    
+    alter table phase_objectives 
+       add constraint FKiqgjby1whm5eixjyqrm9wsdw9 
+       foreign key (phase_id) 
+       references phase
+2021-05-23 07:03:52.660 DEBUG 5464 --- [  restartedMain] org.hibernate.SQL                        : 
+    
+    alter table phase_outputs 
+       add constraint FKm1cttoi0qm0u234qwr5iax24x 
+       foreign key (outputs_id) 
+       references item
+Hibernate: 
+    
+    alter table phase_outputs 
+       add constraint FKm1cttoi0qm0u234qwr5iax24x 
+       foreign key (outputs_id) 
+       references item
+2021-05-23 07:03:52.662 DEBUG 5464 --- [  restartedMain] org.hibernate.SQL                        : 
+    
+    alter table phase_outputs 
+       add constraint FKn4t3wdfxavlucgy3yq2esfwwo 
+       foreign key (phase_id) 
+       references phase
+Hibernate: 
+    
+    alter table phase_outputs 
+       add constraint FKn4t3wdfxavlucgy3yq2esfwwo 
+       foreign key (phase_id) 
+       references phase
+2021-05-23 07:03:52.664 DEBUG 5464 --- [  restartedMain] org.hibernate.SQL                        : 
+    
+    alter table phase_steps 
+       add constraint FKnnhcjvyd96j3nmt2r2d54pakc 
+       foreign key (steps_id) 
+       references item
+Hibernate: 
+    
+    alter table phase_steps 
+       add constraint FKnnhcjvyd96j3nmt2r2d54pakc 
+       foreign key (steps_id) 
+       references item
+2021-05-23 07:03:52.666 DEBUG 5464 --- [  restartedMain] org.hibernate.SQL                        : 
+    
+    alter table phase_steps 
+       add constraint FK1mmwkbqw2ymx5ou97pdxig0t0 
+       foreign key (phase_id) 
+       references phase
+Hibernate: 
+    
+    alter table phase_steps 
+       add constraint FK1mmwkbqw2ymx5ou97pdxig0t0 
+       foreign key (phase_id) 
+       references phase
+2021-05-23 07:03:52.673  INFO 5464 --- [  restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-05-23 07:03:52.685  INFO 5464 --- [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-05-23 07:03:52.744  INFO 5464 --- [  restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-05-23 07:03:53.114  WARN 5464 --- [  restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-05-23 07:03:53.695  INFO 5464 --- [  restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-05-23 07:03:53.722 DEBUG 5464 --- [  restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2021-05-23 07:03:53.787 DEBUG 5464 --- [  restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 3 mappings in 'requestMappingHandlerMapping'
+2021-05-23 07:03:53.855 DEBUG 5464 --- [  restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2021-05-23 07:03:53.871 DEBUG 5464 --- [  restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2021-05-23 07:03:54.568  INFO 5464 --- [  restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 13 endpoint(s) beneath base path '/actuator'
+2021-05-23 07:03:54.662  INFO 5464 --- [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-05-23 07:03:54.688  INFO 5464 --- [  restartedMain] o.p.d.ProcessCatalogApplication          : Started ProcessCatalogApplication in 7.165 seconds (JVM running for 8.533)
+2021-05-23 07:03:54.725 DEBUG 5464 --- [  restartedMain] org.hibernate.SQL                        : 
+    call next value for hibernate_sequence
+Hibernate: 
+    call next value for hibernate_sequence
+2021-05-23 07:03:54.762 DEBUG 5464 --- [  restartedMain] org.hibernate.SQL                        : 
+    call next value for hibernate_sequence
+Hibernate: 
+    call next value for hibernate_sequence
+2021-05-23 07:03:54.764 DEBUG 5464 --- [  restartedMain] org.hibernate.SQL                        : 
+    call next value for hibernate_sequence
+Hibernate: 
+    call next value for hibernate_sequence
+2021-05-23 07:03:54.765 DEBUG 5464 --- [  restartedMain] org.hibernate.SQL                        : 
+    call next value for hibernate_sequence
+Hibernate: 
+    call next value for hibernate_sequence
+2021-05-23 07:03:54.765 DEBUG 5464 --- [  restartedMain] org.hibernate.SQL                        : 
+    call next value for hibernate_sequence
+Hibernate: 
+    call next value for hibernate_sequence
+2021-05-23 07:03:54.766 DEBUG 5464 --- [  restartedMain] org.hibernate.SQL                        : 
+    call next value for hibernate_sequence
+Hibernate: 
+    call next value for hibernate_sequence
+2021-05-23 07:03:54.767 DEBUG 5464 --- [  restartedMain] org.hibernate.SQL                        : 
+    call next value for hibernate_sequence
+Hibernate: 
+    call next value for hibernate_sequence
+2021-05-23 07:03:54.781 DEBUG 5464 --- [  restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        process_definition
+        (active, created_date, deactivated_date, name, sequence_number, id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        process_definition
+        (active, created_date, deactivated_date, name, sequence_number, id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2021-05-23 07:03:54.786 TRACE 5464 --- [  restartedMain] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BOOLEAN] - [true]
+2021-05-23 07:03:54.787 TRACE 5464 --- [  restartedMain] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [TIMESTAMP] - [Sun May 23 07:03:54 IST 2021]
+2021-05-23 07:03:54.800 TRACE 5464 --- [  restartedMain] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [TIMESTAMP] - [null]
+2021-05-23 07:03:54.801 TRACE 5464 --- [  restartedMain] o.h.type.descriptor.sql.BasicBinder      : binding parameter [4] as [VARCHAR] - [process1]
+2021-05-23 07:03:54.802 TRACE 5464 --- [  restartedMain] o.h.type.descriptor.sql.BasicBinder      : binding parameter [5] as [INTEGER] - [1]
+2021-05-23 07:03:54.802 TRACE 5464 --- [  restartedMain] o.h.type.descriptor.sql.BasicBinder      : binding parameter [6] as [BIGINT] - [1]
+2021-05-23 07:03:54.805 DEBUG 5464 --- [  restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        phase
+        (active, created_date, deactivated_date, name, sequence_number, description, process_id, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        phase
+        (active, created_date, deactivated_date, name, sequence_number, description, process_id, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+2021-05-23 07:03:54.806 TRACE 5464 --- [  restartedMain] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BOOLEAN] - [null]
+2021-05-23 07:03:54.806 TRACE 5464 --- [  restartedMain] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [TIMESTAMP] - [null]
+2021-05-23 07:03:54.806 TRACE 5464 --- [  restartedMain] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [TIMESTAMP] - [null]
+2021-05-23 07:03:54.806 TRACE 5464 --- [  restartedMain] o.h.type.descriptor.sql.BasicBinder      : binding parameter [4] as [VARCHAR] - [phase1]
+2021-05-23 07:03:54.807 TRACE 5464 --- [  restartedMain] o.h.type.descriptor.sql.BasicBinder      : binding parameter [5] as [INTEGER] - [null]
+2021-05-23 07:03:54.807 TRACE 5464 --- [  restartedMain] o.h.type.descriptor.sql.BasicBinder      : binding parameter [6] as [VARCHAR] - [null]
+2021-05-23 07:03:54.807 TRACE 5464 --- [  restartedMain] o.h.type.descriptor.sql.BasicBinder      : binding parameter [7] as [BIGINT] - [1]
+2021-05-23 07:03:54.807 TRACE 5464 --- [  restartedMain] o.h.type.descriptor.sql.BasicBinder      : binding parameter [8] as [BIGINT] - [2]
+2021-05-23 07:03:54.808 DEBUG 5464 --- [  restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        item
+        (active, created_date, deactivated_date, name, sequence_number, type, id) 
+    values
+        (?, ?, ?, ?, ?, 'Item', ?)
+Hibernate: 
+    insert 
+    into
+        item
+        (active, created_date, deactivated_date, name, sequence_number, type, id) 
+    values
+        (?, ?, ?, ?, ?, 'Item', ?)
+2021-05-23 07:03:54.809 TRACE 5464 --- [  restartedMain] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BOOLEAN] - [true]
+2021-05-23 07:03:54.809 TRACE 5464 --- [  restartedMain] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [TIMESTAMP] - [Sun May 23 07:03:54 IST 2021]
+2021-05-23 07:03:54.809 TRACE 5464 --- [  restartedMain] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [TIMESTAMP] - [null]
+2021-05-23 07:03:54.810 TRACE 5464 --- [  restartedMain] o.h.type.descriptor.sql.BasicBinder      : binding parameter [4] as [VARCHAR] - [approach]
+2021-05-23 07:03:54.810 TRACE 5464 --- [  restartedMain] o.h.type.descriptor.sql.BasicBinder      : binding parameter [5] as [INTEGER] - [null]
+2021-05-23 07:03:54.810 TRACE 5464 --- [  restartedMain] o.h.type.descriptor.sql.BasicBinder      : binding parameter [6] as [VARCHAR] - [approach]
+2021-05-23 07:03:54.810 TRACE 5464 --- [  restartedMain] o.h.type.descriptor.sql.BasicBinder      : binding parameter [7] as [BIGINT] - [3]
+2021-05-23 07:03:54.812  WARN 5464 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 90008, SQLState: 90008
+2021-05-23 07:03:54.813 ERROR 5464 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : Invalid value "7" for parameter "parameterIndex" [90008-200]
+2021-05-23 07:03:54.832  INFO 5464 --- [  restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-05-23 07:03:54.873 ERROR 5464 --- [  restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+java.lang.IllegalStateException: Failed to execute CommandLineRunner
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:809) ~[spring-boot-2.4.4.jar:2.4.4]
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:790) ~[spring-boot-2.4.4.jar:2.4.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:333) ~[spring-boot-2.4.4.jar:2.4.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1313) ~[spring-boot-2.4.4.jar:2.4.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1302) ~[spring-boot-2.4.4.jar:2.4.4]
+	at org.welldefinedprocess.definition.ProcessCatalogApplication.main(ProcessCatalogApplication.java:27) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.4.4.jar:2.4.4]
+Caused by: org.springframework.dao.DataIntegrityViolationException: could not insert: [org.welldefinedprocess.definition.domain.entity.Item]; SQL [insert into item (active, created_date, deactivated_date, name, sequence_number, type, id) values (?, ?, ?, ?, ?, 'Item', ?)]; nested exception is org.hibernate.exception.DataException: could not insert: [org.welldefinedprocess.definition.domain.entity.Item]
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.convertHibernateAccessException(HibernateJpaDialect.java:280) ~[spring-orm-5.3.5.jar:5.3.5]
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.translateExceptionIfPossible(HibernateJpaDialect.java:233) ~[spring-orm-5.3.5.jar:5.3.5]
+	at org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:566) ~[spring-orm-5.3.5.jar:5.3.5]
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.processCommit(AbstractPlatformTransactionManager.java:743) ~[spring-tx-5.3.5.jar:5.3.5]
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.commit(AbstractPlatformTransactionManager.java:711) ~[spring-tx-5.3.5.jar:5.3.5]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.commitTransactionAfterReturning(TransactionAspectSupport.java:654) ~[spring-tx-5.3.5.jar:5.3.5]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:407) ~[spring-tx-5.3.5.jar:5.3.5]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-5.3.5.jar:5.3.5]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.5.jar:5.3.5]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137) ~[spring-tx-5.3.5.jar:5.3.5]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.5.jar:5.3.5]
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:174) ~[spring-data-jpa-2.4.6.jar:2.4.6]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.5.jar:5.3.5]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97) ~[spring-aop-5.3.5.jar:5.3.5]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.5.jar:5.3.5]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215) ~[spring-aop-5.3.5.jar:5.3.5]
+	at com.sun.proxy.$Proxy113.save(Unknown Source) ~[na:na]
+	at org.welldefinedprocess.definition.ProcessCatalogApplication.lambda$1(ProcessCatalogApplication.java:74) ~[classes/:na]
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:806) ~[spring-boot-2.4.4.jar:2.4.4]
+	... 10 common frames omitted
+Caused by: org.hibernate.exception.DataException: could not insert: [org.welldefinedprocess.definition.domain.entity.Item]
+	at org.hibernate.exception.internal.SQLExceptionTypeDelegate.convert(SQLExceptionTypeDelegate.java:52) ~[hibernate-core-5.4.29.Final.jar:5.4.29.Final]
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:42) ~[hibernate-core-5.4.29.Final.jar:5.4.29.Final]
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:113) ~[hibernate-core-5.4.29.Final.jar:5.4.29.Final]
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:3315) ~[hibernate-core-5.4.29.Final.jar:5.4.29.Final]
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:3824) ~[hibernate-core-5.4.29.Final.jar:5.4.29.Final]
+	at org.hibernate.action.internal.EntityInsertAction.execute(EntityInsertAction.java:107) ~[hibernate-core-5.4.29.Final.jar:5.4.29.Final]
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:604) ~[hibernate-core-5.4.29.Final.jar:5.4.29.Final]
+	at org.hibernate.engine.spi.ActionQueue.lambda$executeActions$1(ActionQueue.java:478) ~[hibernate-core-5.4.29.Final.jar:5.4.29.Final]
+	at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:684) ~[na:na]
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:475) ~[hibernate-core-5.4.29.Final.jar:5.4.29.Final]
+	at org.hibernate.event.internal.AbstractFlushingEventListener.performExecutions(AbstractFlushingEventListener.java:345) ~[hibernate-core-5.4.29.Final.jar:5.4.29.Final]
+	at org.hibernate.event.internal.DefaultFlushEventListener.onFlush(DefaultFlushEventListener.java:40) ~[hibernate-core-5.4.29.Final.jar:5.4.29.Final]
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:93) ~[hibernate-core-5.4.29.Final.jar:5.4.29.Final]
+	at org.hibernate.internal.SessionImpl.doFlush(SessionImpl.java:1362) ~[hibernate-core-5.4.29.Final.jar:5.4.29.Final]
+	at org.hibernate.internal.SessionImpl.managedFlush(SessionImpl.java:453) ~[hibernate-core-5.4.29.Final.jar:5.4.29.Final]
+	at org.hibernate.internal.SessionImpl.flushBeforeTransactionCompletion(SessionImpl.java:3212) ~[hibernate-core-5.4.29.Final.jar:5.4.29.Final]
+	at org.hibernate.internal.SessionImpl.beforeTransactionCompletion(SessionImpl.java:2380) ~[hibernate-core-5.4.29.Final.jar:5.4.29.Final]
+	at org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl.beforeTransactionCompletion(JdbcCoordinatorImpl.java:447) ~[hibernate-core-5.4.29.Final.jar:5.4.29.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.beforeCompletionCallback(JdbcResourceLocalTransactionCoordinatorImpl.java:183) ~[hibernate-core-5.4.29.Final.jar:5.4.29.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.access$300(JdbcResourceLocalTransactionCoordinatorImpl.java:40) ~[hibernate-core-5.4.29.Final.jar:5.4.29.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl$TransactionDriverControlImpl.commit(JdbcResourceLocalTransactionCoordinatorImpl.java:281) ~[hibernate-core-5.4.29.Final.jar:5.4.29.Final]
+	at org.hibernate.engine.transaction.internal.TransactionImpl.commit(TransactionImpl.java:101) ~[hibernate-core-5.4.29.Final.jar:5.4.29.Final]
+	at org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:562) ~[spring-orm-5.3.5.jar:5.3.5]
+	... 26 common frames omitted
+Caused by: org.h2.jdbc.JdbcSQLDataException: Invalid value "7" for parameter "parameterIndex" [90008-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:590) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.message.DbException.get(DbException.java:205) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.message.DbException.getInvalidValueException(DbException.java:280) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.jdbc.JdbcPreparedStatement.setParameter(JdbcPreparedStatement.java:1503) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.jdbc.JdbcPreparedStatement.setLong(JdbcPreparedStatement.java:642) ~[h2-1.4.200.jar:1.4.200]
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.setLong(HikariProxyPreparedStatement.java) ~[HikariCP-3.4.5.jar:na]
+	at org.hibernate.type.descriptor.sql.BigIntTypeDescriptor$1.doBind(BigIntTypeDescriptor.java:46) ~[hibernate-core-5.4.29.Final.jar:5.4.29.Final]
+	at org.hibernate.type.descriptor.sql.BasicBinder.bind(BasicBinder.java:73) ~[hibernate-core-5.4.29.Final.jar:5.4.29.Final]
+	at org.hibernate.type.AbstractStandardBasicType.nullSafeSet(AbstractStandardBasicType.java:276) ~[hibernate-core-5.4.29.Final.jar:5.4.29.Final]
+	at org.hibernate.type.AbstractStandardBasicType.nullSafeSet(AbstractStandardBasicType.java:271) ~[hibernate-core-5.4.29.Final.jar:5.4.29.Final]
+	at org.hibernate.persister.entity.AbstractEntityPersister.dehydrateId(AbstractEntityPersister.java:3039) ~[hibernate-core-5.4.29.Final.jar:5.4.29.Final]
+	at org.hibernate.persister.entity.AbstractEntityPersister.dehydrate(AbstractEntityPersister.java:2997) ~[hibernate-core-5.4.29.Final.jar:5.4.29.Final]
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:3288) ~[hibernate-core-5.4.29.Final.jar:5.4.29.Final]
+	... 45 common frames omitted
+
+2021-05-23 07:03:55.113  INFO 5464 --- [  restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-05-23 07:03:55.116  INFO 5464 --- [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-05-23 07:03:55.116  INFO 5464 --- [  restartedMain] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2021-05-23 07:03:55.117 DEBUG 5464 --- [  restartedMain] org.hibernate.SQL                        : 
+    
+    drop table if exists item CASCADE 
+Hibernate: 
+    
+    drop table if exists item CASCADE 
+2021-05-23 07:03:55.123 DEBUG 5464 --- [  restartedMain] org.hibernate.SQL                        : 
+    
+    drop table if exists phase CASCADE 
+Hibernate: 
+    
+    drop table if exists phase CASCADE 
+2021-05-23 07:03:55.131 DEBUG 5464 --- [  restartedMain] org.hibernate.SQL                        : 
+    
+    drop table if exists phase_approach CASCADE 
+Hibernate: 
+    
+    drop table if exists phase_approach CASCADE 
+2021-05-23 07:03:55.132 DEBUG 5464 --- [  restartedMain] org.hibernate.SQL                        : 
+    
+    drop table if exists phase_inputs CASCADE 
+Hibernate: 
+    
+    drop table if exists phase_inputs CASCADE 
+2021-05-23 07:03:55.134 DEBUG 5464 --- [  restartedMain] org.hibernate.SQL                        : 
+    
+    drop table if exists phase_objectives CASCADE 
+Hibernate: 
+    
+    drop table if exists phase_objectives CASCADE 
+2021-05-23 07:03:55.135 DEBUG 5464 --- [  restartedMain] org.hibernate.SQL                        : 
+    
+    drop table if exists phase_outputs CASCADE 
+Hibernate: 
+    
+    drop table if exists phase_outputs CASCADE 
+2021-05-23 07:03:55.136 DEBUG 5464 --- [  restartedMain] org.hibernate.SQL                        : 
+    
+    drop table if exists phase_steps CASCADE 
+Hibernate: 
+    
+    drop table if exists phase_steps CASCADE 
+2021-05-23 07:03:55.137 DEBUG 5464 --- [  restartedMain] org.hibernate.SQL                        : 
+    
+    drop table if exists process_definition CASCADE 
+Hibernate: 
+    
+    drop table if exists process_definition CASCADE 
+2021-05-23 07:03:55.139 DEBUG 5464 --- [  restartedMain] org.hibernate.SQL                        : 
+    
+    drop sequence if exists hibernate_sequence
+Hibernate: 
+    
+    drop sequence if exists hibernate_sequence
+2021-05-23 07:03:55.358  WARN 5464 --- [  restartedMain] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+2021-05-23 07:03:55.360  INFO 5464 --- [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-05-23 07:03:55.371  INFO 5464 --- [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

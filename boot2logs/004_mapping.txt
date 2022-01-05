@@ -1,0 +1,2 @@
+Caused by: org.hibernate.MappingException: Could not determine type for: java.util.List, at table: phase, for columns: [org.hibernate.mapping.Column(approach)]
+Caused by: org.hibernate.AnnotationException: Use of @OneToMany or @ManyToMany targeting an unmapped class: org.welldefinedprocess.definition.controller.domain.entity.Phase.approach[java.lang.String]

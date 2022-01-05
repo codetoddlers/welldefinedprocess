@@ -1,0 +1,43 @@
+[
+	{
+		"id": 1,
+		"sequenceNumber": 1,
+		"name": "welldefinedprocess1",
+		"active": true,
+		"createdDate": "2021-11-07T14:16:45.704+00:00",
+		"deactivatedDate": null,
+		"phase": [
+			{
+				"id": 2,
+				"sequenceNumber": null,
+				"name": "phase1",
+				"active": null,
+				"createdDate": null,
+				"deactivatedDate": null,
+				"description": null,
+				"objectives": [],
+				"inputs": [],
+				"steps": [],
+				"outputs": [],
+				"approach": [
+					{
+						"id": 3,
+						"sequenceNumber": null,
+						"name": "approach20211107+0530",
+						"active": true,
+						"createdDate": "2021-11-07T14:16:45.710+00:00",
+						"deactivatedDate": null
+					},
+					{
+						"id": 4,
+						"sequenceNumber": null,
+						"name": "approach20211107+0530",
+						"active": true,
+						"createdDate": "2021-11-07T14:16:45.710+00:00",
+						"deactivatedDate": null
+					}
+				]
+			}
+		]
+	}
+]

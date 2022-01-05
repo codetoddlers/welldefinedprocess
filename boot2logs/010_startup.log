@@ -1,0 +1,1115 @@
+ ____                                 ____      _        _             
+|  _ \ _ __ ___   ___ ___  ___ ___   / ___|__ _| |_ __ _| | ___   __ _ 
+| |_) | '__/ _ \ / __/ _ \/ __/ __| | |   / _` | __/ _` | |/ _ \ / _` |
+|  __/| | | (_) | (_|  __/\__ \__ \ | |__| (_| | || (_| | | (_) | (_| |
+|_|   |_|  \___/ \___\___||___/___/  \____\__,_|\__\__,_|_|\___/ \__, |
+                                                                 |___/ 
+
+2021-05-22 07:25:34.605  INFO 21088 --- [  restartedMain] o.p.d.ProcessCatalogApplication          : Starting ProcessCatalogApplication using Java 11 on LAPTOP-9A4SC2Q5 with PID 21088 (E:\work\springbootprototypes\entity\target\classes started by myfri in E:\work\springbootprototypes\entity)
+2021-05-22 07:25:34.607  INFO 21088 --- [  restartedMain] o.p.d.ProcessCatalogApplication          : No active profile set, falling back to default profiles: default
+2021-05-22 07:25:34.659  INFO 21088 --- [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-05-22 07:25:35.446  INFO 21088 --- [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-05-22 07:25:35.494  INFO 21088 --- [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 40 ms. Found 2 JPA repository interfaces.
+2021-05-22 07:25:36.156  INFO 21088 --- [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-05-22 07:25:36.181  INFO 21088 --- [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-05-22 07:25:36.181  INFO 21088 --- [  restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.44]
+2021-05-22 07:25:36.264  INFO 21088 --- [  restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-05-22 07:25:36.264  INFO 21088 --- [  restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1604 ms
+2021-05-22 07:25:36.487  INFO 21088 --- [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-05-22 07:25:36.614  INFO 21088 --- [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-05-22 07:25:36.619  INFO 21088 --- [  restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:180e7e61-fa1b-4461-86c0-e897edf3508d'
+2021-05-22 07:25:36.743 DEBUG 21088 --- [  restartedMain] o.s.b.w.s.ServletContextInitializerBeans : Mapping filters: filterRegistrationBean urls=[/*] order=-2147483647, characterEncodingFilter urls=[/*] order=-2147483648, formContentFilter urls=[/*] order=-9900, requestContextFilter urls=[/*] order=-105
+2021-05-22 07:25:36.743 DEBUG 21088 --- [  restartedMain] o.s.b.w.s.ServletContextInitializerBeans : Mapping servlets: dispatcherServlet urls=[/], webServlet urls=[/h2-console/*]
+2021-05-22 07:25:36.882  INFO 21088 --- [  restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-05-22 07:25:36.933  INFO 21088 --- [  restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.29.Final
+2021-05-22 07:25:37.070  INFO 21088 --- [  restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-05-22 07:25:37.175  INFO 21088 --- [  restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-05-22 07:25:37.704 DEBUG 21088 --- [  restartedMain] org.hibernate.SQL                        : 
+    
+    drop table if exists item CASCADE 
+Hibernate: 
+    
+    drop table if exists item CASCADE 
+2021-05-22 07:25:37.706 DEBUG 21088 --- [  restartedMain] org.hibernate.SQL                        : 
+    
+    drop table if exists phase CASCADE 
+Hibernate: 
+    
+    drop table if exists phase CASCADE 
+2021-05-22 07:25:37.706 DEBUG 21088 --- [  restartedMain] org.hibernate.SQL                        : 
+    
+    drop table if exists phase_approach CASCADE 
+Hibernate: 
+    
+    drop table if exists phase_approach CASCADE 
+2021-05-22 07:25:37.706 DEBUG 21088 --- [  restartedMain] org.hibernate.SQL                        : 
+    
+    drop table if exists phase_inputs CASCADE 
+Hibernate: 
+    
+    drop table if exists phase_inputs CASCADE 
+2021-05-22 07:25:37.706 DEBUG 21088 --- [  restartedMain] org.hibernate.SQL                        : 
+    
+    drop table if exists phase_objectives CASCADE 
+Hibernate: 
+    
+    drop table if exists phase_objectives CASCADE 
+2021-05-22 07:25:37.707 DEBUG 21088 --- [  restartedMain] org.hibernate.SQL                        : 
+    
+    drop table if exists phase_outputs CASCADE 
+Hibernate: 
+    
+    drop table if exists phase_outputs CASCADE 
+2021-05-22 07:25:37.707 DEBUG 21088 --- [  restartedMain] org.hibernate.SQL                        : 
+    
+    drop table if exists phase_steps CASCADE 
+Hibernate: 
+    
+    drop table if exists phase_steps CASCADE 
+2021-05-22 07:25:37.707 DEBUG 21088 --- [  restartedMain] org.hibernate.SQL                        : 
+    
+    drop table if exists process_definition CASCADE 
+Hibernate: 
+    
+    drop table if exists process_definition CASCADE 
+2021-05-22 07:25:37.709 DEBUG 21088 --- [  restartedMain] org.hibernate.SQL                        : 
+    
+    create table item (
+       type varchar(20) not null,
+        id bigint not null,
+        active boolean,
+        created_date timestamp,
+        deactivated_date timestamp,
+        name varchar(255),
+        sequence_number integer,
+        primary key (id)
+    )
+Hibernate: 
+    
+    create table item (
+       type varchar(20) not null,
+        id bigint not null,
+        active boolean,
+        created_date timestamp,
+        deactivated_date timestamp,
+        name varchar(255),
+        sequence_number integer,
+        primary key (id)
+    )
+2021-05-22 07:25:37.713 DEBUG 21088 --- [  restartedMain] org.hibernate.SQL                        : 
+    
+    create table phase (
+       id bigint not null,
+        active boolean,
+        created_date timestamp,
+        deactivated_date timestamp,
+        name varchar(255),
+        sequence_number integer,
+        description varchar(255),
+        process_id bigint,
+        primary key (id)
+    )
+Hibernate: 
+    
+    create table phase (
+       id bigint not null,
+        active boolean,
+        created_date timestamp,
+        deactivated_date timestamp,
+        name varchar(255),
+        sequence_number integer,
+        description varchar(255),
+        process_id bigint,
+        primary key (id)
+    )
+2021-05-22 07:25:37.714 DEBUG 21088 --- [  restartedMain] org.hibernate.SQL                        : 
+    
+    create table phase_approach (
+       phase_id bigint not null,
+        approach_id bigint not null
+    )
+Hibernate: 
+    
+    create table phase_approach (
+       phase_id bigint not null,
+        approach_id bigint not null
+    )
+2021-05-22 07:25:37.715 DEBUG 21088 --- [  restartedMain] org.hibernate.SQL                        : 
+    
+    create table phase_inputs (
+       phase_id bigint not null,
+        inputs_id bigint not null
+    )
+Hibernate: 
+    
+    create table phase_inputs (
+       phase_id bigint not null,
+        inputs_id bigint not null
+    )
+2021-05-22 07:25:37.715 DEBUG 21088 --- [  restartedMain] org.hibernate.SQL                        : 
+    
+    create table phase_objectives (
+       phase_id bigint not null,
+        objectives_id bigint not null
+    )
+Hibernate: 
+    
+    create table phase_objectives (
+       phase_id bigint not null,
+        objectives_id bigint not null
+    )
+2021-05-22 07:25:37.716 DEBUG 21088 --- [  restartedMain] org.hibernate.SQL                        : 
+    
+    create table phase_outputs (
+       phase_id bigint not null,
+        outputs_id bigint not null
+    )
+Hibernate: 
+    
+    create table phase_outputs (
+       phase_id bigint not null,
+        outputs_id bigint not null
+    )
+2021-05-22 07:25:37.716 DEBUG 21088 --- [  restartedMain] org.hibernate.SQL                        : 
+    
+    create table phase_steps (
+       phase_id bigint not null,
+        steps_id bigint not null
+    )
+Hibernate: 
+    
+    create table phase_steps (
+       phase_id bigint not null,
+        steps_id bigint not null
+    )
+2021-05-22 07:25:37.716 DEBUG 21088 --- [  restartedMain] org.hibernate.SQL                        : 
+    
+    create table process_definition (
+       id bigint not null,
+        active boolean,
+        created_date timestamp,
+        deactivated_date timestamp,
+        name varchar(255),
+        sequence_number integer,
+        primary key (id)
+    )
+Hibernate: 
+    
+    create table process_definition (
+       id bigint not null,
+        active boolean,
+        created_date timestamp,
+        deactivated_date timestamp,
+        name varchar(255),
+        sequence_number integer,
+        primary key (id)
+    )
+2021-05-22 07:25:37.717 DEBUG 21088 --- [  restartedMain] org.hibernate.SQL                        : 
+    
+    alter table phase_approach 
+       add constraint UK_m8yg932ksiidg9xr9odu2hkgn unique (approach_id)
+Hibernate: 
+    
+    alter table phase_approach 
+       add constraint UK_m8yg932ksiidg9xr9odu2hkgn unique (approach_id)
+2021-05-22 07:25:37.720 DEBUG 21088 --- [  restartedMain] org.hibernate.SQL                        : 
+    
+    alter table phase_inputs 
+       add constraint UK_rh500wbtlh246btu3phj0p14o unique (inputs_id)
+Hibernate: 
+    
+    alter table phase_inputs 
+       add constraint UK_rh500wbtlh246btu3phj0p14o unique (inputs_id)
+2021-05-22 07:25:37.721 DEBUG 21088 --- [  restartedMain] org.hibernate.SQL                        : 
+    
+    alter table phase_objectives 
+       add constraint UK_aht7gdbdd6oavtyl0pa8fnpw7 unique (objectives_id)
+Hibernate: 
+    
+    alter table phase_objectives 
+       add constraint UK_aht7gdbdd6oavtyl0pa8fnpw7 unique (objectives_id)
+2021-05-22 07:25:37.722 DEBUG 21088 --- [  restartedMain] org.hibernate.SQL                        : 
+    
+    alter table phase_outputs 
+       add constraint UK_cis9k50hw2jyvv50lb3vmjb4a unique (outputs_id)
+Hibernate: 
+    
+    alter table phase_outputs 
+       add constraint UK_cis9k50hw2jyvv50lb3vmjb4a unique (outputs_id)
+2021-05-22 07:25:37.722 DEBUG 21088 --- [  restartedMain] org.hibernate.SQL                        : 
+    
+    alter table phase_steps 
+       add constraint UK_jyycr73rqj9eyuur5lqjrsnir unique (steps_id)
+Hibernate: 
+    
+    alter table phase_steps 
+       add constraint UK_jyycr73rqj9eyuur5lqjrsnir unique (steps_id)
+2021-05-22 07:25:37.723 DEBUG 21088 --- [  restartedMain] org.hibernate.SQL                        : 
+    
+    alter table phase 
+       add constraint FK8ltfwy6emebvxba8do8hvv78b 
+       foreign key (process_id) 
+       references process_definition
+Hibernate: 
+    
+    alter table phase 
+       add constraint FK8ltfwy6emebvxba8do8hvv78b 
+       foreign key (process_id) 
+       references process_definition
+2021-05-22 07:25:37.729 DEBUG 21088 --- [  restartedMain] org.hibernate.SQL                        : 
+    
+    alter table phase_approach 
+       add constraint FKjssqk2xnnypr2lnuvw7qy5tx5 
+       foreign key (approach_id) 
+       references item
+Hibernate: 
+    
+    alter table phase_approach 
+       add constraint FKjssqk2xnnypr2lnuvw7qy5tx5 
+       foreign key (approach_id) 
+       references item
+2021-05-22 07:25:37.730 DEBUG 21088 --- [  restartedMain] org.hibernate.SQL                        : 
+    
+    alter table phase_approach 
+       add constraint FK61kr7s56a5t0xx09r1hu2rumg 
+       foreign key (phase_id) 
+       references phase
+Hibernate: 
+    
+    alter table phase_approach 
+       add constraint FK61kr7s56a5t0xx09r1hu2rumg 
+       foreign key (phase_id) 
+       references phase
+2021-05-22 07:25:37.731 DEBUG 21088 --- [  restartedMain] org.hibernate.SQL                        : 
+    
+    alter table phase_inputs 
+       add constraint FKabakysd50cyky5pbmw4i9iyfm 
+       foreign key (inputs_id) 
+       references item
+Hibernate: 
+    
+    alter table phase_inputs 
+       add constraint FKabakysd50cyky5pbmw4i9iyfm 
+       foreign key (inputs_id) 
+       references item
+2021-05-22 07:25:37.733 DEBUG 21088 --- [  restartedMain] org.hibernate.SQL                        : 
+    
+    alter table phase_inputs 
+       add constraint FKqufkp5y96mwoqm9e1mnbho2ul 
+       foreign key (phase_id) 
+       references phase
+Hibernate: 
+    
+    alter table phase_inputs 
+       add constraint FKqufkp5y96mwoqm9e1mnbho2ul 
+       foreign key (phase_id) 
+       references phase
+2021-05-22 07:25:37.734 DEBUG 21088 --- [  restartedMain] org.hibernate.SQL                        : 
+    
+    alter table phase_objectives 
+       add constraint FKimvyw7f5qengxym5om2nvfpfk 
+       foreign key (objectives_id) 
+       references item
+Hibernate: 
+    
+    alter table phase_objectives 
+       add constraint FKimvyw7f5qengxym5om2nvfpfk 
+       foreign key (objectives_id) 
+       references item
+2021-05-22 07:25:37.735 DEBUG 21088 --- [  restartedMain] org.hibernate.SQL                        : 
+    
+    alter table phase_objectives 
+       add constraint FKiqgjby1whm5eixjyqrm9wsdw9 
+       foreign key (phase_id) 
+       references phase
+Hibernate: 
+    
+    alter table phase_objectives 
+       add constraint FKiqgjby1whm5eixjyqrm9wsdw9 
+       foreign key (phase_id) 
+       references phase
+2021-05-22 07:25:37.737 DEBUG 21088 --- [  restartedMain] org.hibernate.SQL                        : 
+    
+    alter table phase_outputs 
+       add constraint FKm1cttoi0qm0u234qwr5iax24x 
+       foreign key (outputs_id) 
+       references item
+Hibernate: 
+    
+    alter table phase_outputs 
+       add constraint FKm1cttoi0qm0u234qwr5iax24x 
+       foreign key (outputs_id) 
+       references item
+2021-05-22 07:25:37.738 DEBUG 21088 --- [  restartedMain] org.hibernate.SQL                        : 
+    
+    alter table phase_outputs 
+       add constraint FKn4t3wdfxavlucgy3yq2esfwwo 
+       foreign key (phase_id) 
+       references phase
+Hibernate: 
+    
+    alter table phase_outputs 
+       add constraint FKn4t3wdfxavlucgy3yq2esfwwo 
+       foreign key (phase_id) 
+       references phase
+2021-05-22 07:25:37.739 DEBUG 21088 --- [  restartedMain] org.hibernate.SQL                        : 
+    
+    alter table phase_steps 
+       add constraint FKnnhcjvyd96j3nmt2r2d54pakc 
+       foreign key (steps_id) 
+       references item
+Hibernate: 
+    
+    alter table phase_steps 
+       add constraint FKnnhcjvyd96j3nmt2r2d54pakc 
+       foreign key (steps_id) 
+       references item
+2021-05-22 07:25:37.741 DEBUG 21088 --- [  restartedMain] org.hibernate.SQL                        : 
+    
+    alter table phase_steps 
+       add constraint FK1mmwkbqw2ymx5ou97pdxig0t0 
+       foreign key (phase_id) 
+       references phase
+Hibernate: 
+    
+    alter table phase_steps 
+       add constraint FK1mmwkbqw2ymx5ou97pdxig0t0 
+       foreign key (phase_id) 
+       references phase
+2021-05-22 07:25:37.745  INFO 21088 --- [  restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-05-22 07:25:37.752  INFO 21088 --- [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-05-22 07:25:37.794  INFO 21088 --- [  restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-05-22 07:25:38.085  WARN 21088 --- [  restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-05-22 07:25:38.528  INFO 21088 --- [  restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-05-22 07:25:38.548 DEBUG 21088 --- [  restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2021-05-22 07:25:38.605 DEBUG 21088 --- [  restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 3 mappings in 'requestMappingHandlerMapping'
+2021-05-22 07:25:38.655 DEBUG 21088 --- [  restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2021-05-22 07:25:38.667 DEBUG 21088 --- [  restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2021-05-22 07:25:39.114  INFO 21088 --- [  restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 13 endpoint(s) beneath base path '/actuator'
+2021-05-22 07:25:39.188  INFO 21088 --- [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-05-22 07:25:39.201  INFO 21088 --- [  restartedMain] o.p.d.ProcessCatalogApplication          : Started ProcessCatalogApplication in 4.956 seconds (JVM running for 6.104)
+2021-05-22 07:25:39.234 DEBUG 21088 --- [  restartedMain] org.hibernate.SQL                        : 
+    select
+        processdef0_.id as id1_7_1_,
+        processdef0_.active as active2_7_1_,
+        processdef0_.created_date as created_3_7_1_,
+        processdef0_.deactivated_date as deactiva4_7_1_,
+        processdef0_.name as name5_7_1_,
+        processdef0_.sequence_number as sequence6_7_1_,
+        phase1_.process_id as process_8_1_3_,
+        phase1_.id as id1_1_3_,
+        phase1_.id as id1_1_0_,
+        phase1_.active as active2_1_0_,
+        phase1_.created_date as created_3_1_0_,
+        phase1_.deactivated_date as deactiva4_1_0_,
+        phase1_.name as name5_1_0_,
+        phase1_.sequence_number as sequence6_1_0_,
+        phase1_.description as descript7_1_0_,
+        phase1_.process_id as process_8_1_0_ 
+    from
+        process_definition processdef0_ 
+    left outer join
+        phase phase1_ 
+            on processdef0_.id=phase1_.process_id 
+    where
+        processdef0_.id=?
+Hibernate: 
+    select
+        processdef0_.id as id1_7_1_,
+        processdef0_.active as active2_7_1_,
+        processdef0_.created_date as created_3_7_1_,
+        processdef0_.deactivated_date as deactiva4_7_1_,
+        processdef0_.name as name5_7_1_,
+        processdef0_.sequence_number as sequence6_7_1_,
+        phase1_.process_id as process_8_1_3_,
+        phase1_.id as id1_1_3_,
+        phase1_.id as id1_1_0_,
+        phase1_.active as active2_1_0_,
+        phase1_.created_date as created_3_1_0_,
+        phase1_.deactivated_date as deactiva4_1_0_,
+        phase1_.name as name5_1_0_,
+        phase1_.sequence_number as sequence6_1_0_,
+        phase1_.description as descript7_1_0_,
+        phase1_.process_id as process_8_1_0_ 
+    from
+        process_definition processdef0_ 
+    left outer join
+        phase phase1_ 
+            on processdef0_.id=phase1_.process_id 
+    where
+        processdef0_.id=?
+2021-05-22 07:25:39.238 TRACE 21088 --- [  restartedMain] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [1]
+2021-05-22 07:25:39.252 DEBUG 21088 --- [  restartedMain] org.hibernate.SQL                        : 
+    select
+        phase0_.id as id1_1_0_,
+        phase0_.active as active2_1_0_,
+        phase0_.created_date as created_3_1_0_,
+        phase0_.deactivated_date as deactiva4_1_0_,
+        phase0_.name as name5_1_0_,
+        phase0_.sequence_number as sequence6_1_0_,
+        phase0_.description as descript7_1_0_,
+        phase0_.process_id as process_8_1_0_ 
+    from
+        phase phase0_ 
+    where
+        phase0_.id=?
+Hibernate: 
+    select
+        phase0_.id as id1_1_0_,
+        phase0_.active as active2_1_0_,
+        phase0_.created_date as created_3_1_0_,
+        phase0_.deactivated_date as deactiva4_1_0_,
+        phase0_.name as name5_1_0_,
+        phase0_.sequence_number as sequence6_1_0_,
+        phase0_.description as descript7_1_0_,
+        phase0_.process_id as process_8_1_0_ 
+    from
+        phase phase0_ 
+    where
+        phase0_.id=?
+2021-05-22 07:25:39.252 TRACE 21088 --- [  restartedMain] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [1]
+2021-05-22 07:25:39.264 DEBUG 21088 --- [  restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        process_definition
+        (active, created_date, deactivated_date, name, sequence_number, id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        process_definition
+        (active, created_date, deactivated_date, name, sequence_number, id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2021-05-22 07:25:39.266 TRACE 21088 --- [  restartedMain] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BOOLEAN] - [true]
+2021-05-22 07:25:39.267 TRACE 21088 --- [  restartedMain] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [TIMESTAMP] - [Sat May 22 07:25:39 IST 2021]
+2021-05-22 07:25:39.276 TRACE 21088 --- [  restartedMain] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [TIMESTAMP] - [null]
+2021-05-22 07:25:39.276 TRACE 21088 --- [  restartedMain] o.h.type.descriptor.sql.BasicBinder      : binding parameter [4] as [VARCHAR] - [togaf]
+2021-05-22 07:25:39.277 TRACE 21088 --- [  restartedMain] o.h.type.descriptor.sql.BasicBinder      : binding parameter [5] as [INTEGER] - [1]
+2021-05-22 07:25:39.277 TRACE 21088 --- [  restartedMain] o.h.type.descriptor.sql.BasicBinder      : binding parameter [6] as [BIGINT] - [1]
+2021-05-22 07:25:39.279 DEBUG 21088 --- [  restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        phase
+        (active, created_date, deactivated_date, name, sequence_number, description, process_id, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        phase
+        (active, created_date, deactivated_date, name, sequence_number, description, process_id, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+2021-05-22 07:25:39.279 TRACE 21088 --- [  restartedMain] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BOOLEAN] - [null]
+2021-05-22 07:25:39.279 TRACE 21088 --- [  restartedMain] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [TIMESTAMP] - [null]
+2021-05-22 07:25:39.279 TRACE 21088 --- [  restartedMain] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [TIMESTAMP] - [null]
+2021-05-22 07:25:39.279 TRACE 21088 --- [  restartedMain] o.h.type.descriptor.sql.BasicBinder      : binding parameter [4] as [VARCHAR] - [Preliminary]
+2021-05-22 07:25:39.279 TRACE 21088 --- [  restartedMain] o.h.type.descriptor.sql.BasicBinder      : binding parameter [5] as [INTEGER] - [null]
+2021-05-22 07:25:39.279 TRACE 21088 --- [  restartedMain] o.h.type.descriptor.sql.BasicBinder      : binding parameter [6] as [VARCHAR] - [null]
+2021-05-22 07:25:39.280 TRACE 21088 --- [  restartedMain] o.h.type.descriptor.sql.BasicBinder      : binding parameter [7] as [BIGINT] - [1]
+2021-05-22 07:25:39.280 TRACE 21088 --- [  restartedMain] o.h.type.descriptor.sql.BasicBinder      : binding parameter [8] as [BIGINT] - [1]
+2021-05-22 07:25:42.018  INFO 21088 --- [on(3)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-05-22 07:25:42.019  INFO 21088 --- [on(3)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-05-22 07:25:42.019 DEBUG 21088 --- [on(3)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2021-05-22 07:25:42.019 DEBUG 21088 --- [on(3)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2021-05-22 07:25:42.019 DEBUG 21088 --- [on(3)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2021-05-22 07:25:42.020 DEBUG 21088 --- [on(3)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@11772395
+2021-05-22 07:25:42.020 DEBUG 21088 --- [on(3)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@347a9a1b
+2021-05-22 07:25:42.020 DEBUG 21088 --- [on(3)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2021-05-22 07:25:42.020  INFO 21088 --- [on(3)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-05-22 07:29:00.529  INFO 21088 --- [       Thread-4] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-05-22 07:29:00.531  INFO 21088 --- [       Thread-4] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-05-22 07:29:00.532  INFO 21088 --- [       Thread-4] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2021-05-22 07:29:00.532 DEBUG 21088 --- [       Thread-4] org.hibernate.SQL                        : 
+    
+    drop table if exists item CASCADE 
+Hibernate: 
+    
+    drop table if exists item CASCADE 
+2021-05-22 07:29:00.537 DEBUG 21088 --- [       Thread-4] org.hibernate.SQL                        : 
+    
+    drop table if exists phase CASCADE 
+Hibernate: 
+    
+    drop table if exists phase CASCADE 
+2021-05-22 07:29:00.539 DEBUG 21088 --- [       Thread-4] org.hibernate.SQL                        : 
+    
+    drop table if exists phase_approach CASCADE 
+Hibernate: 
+    
+    drop table if exists phase_approach CASCADE 
+2021-05-22 07:29:00.539 DEBUG 21088 --- [       Thread-4] org.hibernate.SQL                        : 
+    
+    drop table if exists phase_inputs CASCADE 
+Hibernate: 
+    
+    drop table if exists phase_inputs CASCADE 
+2021-05-22 07:29:00.540 DEBUG 21088 --- [       Thread-4] org.hibernate.SQL                        : 
+    
+    drop table if exists phase_objectives CASCADE 
+Hibernate: 
+    
+    drop table if exists phase_objectives CASCADE 
+2021-05-22 07:29:00.540 DEBUG 21088 --- [       Thread-4] org.hibernate.SQL                        : 
+    
+    drop table if exists phase_outputs CASCADE 
+Hibernate: 
+    
+    drop table if exists phase_outputs CASCADE 
+2021-05-22 07:29:00.541 DEBUG 21088 --- [       Thread-4] org.hibernate.SQL                        : 
+    
+    drop table if exists phase_steps CASCADE 
+Hibernate: 
+    
+    drop table if exists phase_steps CASCADE 
+2021-05-22 07:29:00.541 DEBUG 21088 --- [       Thread-4] org.hibernate.SQL                        : 
+    
+    drop table if exists process_definition CASCADE 
+Hibernate: 
+    
+    drop table if exists process_definition CASCADE 
+2021-05-22 07:29:00.749  WARN 21088 --- [       Thread-4] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+2021-05-22 07:29:00.750  INFO 21088 --- [       Thread-4] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-05-22 07:29:00.755  INFO 21088 --- [       Thread-4] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+ ____                                 ____      _        _             
+|  _ \ _ __ ___   ___ ___  ___ ___   / ___|__ _| |_ __ _| | ___   __ _ 
+| |_) | '__/ _ \ / __/ _ \/ __/ __| | |   / _` | __/ _` | |/ _ \ / _` |
+|  __/| | | (_) | (_|  __/\__ \__ \ | |__| (_| | || (_| | | (_) | (_| |
+|_|   |_|  \___/ \___\___||___/___/  \____\__,_|\__\__,_|_|\___/ \__, |
+                                                                 |___/ 
+
+2021-05-22 07:29:00.829  INFO 21088 --- [  restartedMain] o.p.d.ProcessCatalogApplication          : Starting ProcessCatalogApplication using Java 11 on LAPTOP-9A4SC2Q5 with PID 21088 (E:\work\springbootprototypes\entity\target\classes started by myfri in E:\work\springbootprototypes\entity)
+2021-05-22 07:29:00.829  INFO 21088 --- [  restartedMain] o.p.d.ProcessCatalogApplication          : No active profile set, falling back to default profiles: default
+2021-05-22 07:29:01.049  INFO 21088 --- [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-05-22 07:29:01.056  INFO 21088 --- [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6 ms. Found 2 JPA repository interfaces.
+2021-05-22 07:29:01.132  INFO 21088 --- [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-05-22 07:29:01.132  INFO 21088 --- [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-05-22 07:29:01.132  INFO 21088 --- [  restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.44]
+2021-05-22 07:29:01.145  INFO 21088 --- [  restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-05-22 07:29:01.145  INFO 21088 --- [  restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 314 ms
+2021-05-22 07:29:01.170  INFO 21088 --- [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2021-05-22 07:29:01.172  INFO 21088 --- [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2021-05-22 07:29:01.172  INFO 21088 --- [  restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:997033db-0982-49a2-8492-8e5beb869ba1'
+2021-05-22 07:29:01.187 DEBUG 21088 --- [  restartedMain] o.s.b.w.s.ServletContextInitializerBeans : Mapping filters: filterRegistrationBean urls=[/*] order=-2147483647, characterEncodingFilter urls=[/*] order=-2147483648, formContentFilter urls=[/*] order=-9900, requestContextFilter urls=[/*] order=-105
+2021-05-22 07:29:01.188 DEBUG 21088 --- [  restartedMain] o.s.b.w.s.ServletContextInitializerBeans : Mapping servlets: dispatcherServlet urls=[/], webServlet urls=[/h2-console/*]
+2021-05-22 07:29:01.199  INFO 21088 --- [  restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-05-22 07:29:01.203  INFO 21088 --- [  restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-05-22 07:29:01.252 DEBUG 21088 --- [  restartedMain] org.hibernate.SQL                        : 
+    
+    drop table if exists item CASCADE 
+Hibernate: 
+    
+    drop table if exists item CASCADE 
+2021-05-22 07:29:01.252 DEBUG 21088 --- [  restartedMain] org.hibernate.SQL                        : 
+    
+    drop table if exists phase CASCADE 
+Hibernate: 
+    
+    drop table if exists phase CASCADE 
+2021-05-22 07:29:01.253 DEBUG 21088 --- [  restartedMain] org.hibernate.SQL                        : 
+    
+    drop table if exists phase_approach CASCADE 
+Hibernate: 
+    
+    drop table if exists phase_approach CASCADE 
+2021-05-22 07:29:01.253 DEBUG 21088 --- [  restartedMain] org.hibernate.SQL                        : 
+    
+    drop table if exists phase_inputs CASCADE 
+Hibernate: 
+    
+    drop table if exists phase_inputs CASCADE 
+2021-05-22 07:29:01.253 DEBUG 21088 --- [  restartedMain] org.hibernate.SQL                        : 
+    
+    drop table if exists phase_objectives CASCADE 
+Hibernate: 
+    
+    drop table if exists phase_objectives CASCADE 
+2021-05-22 07:29:01.253 DEBUG 21088 --- [  restartedMain] org.hibernate.SQL                        : 
+    
+    drop table if exists phase_outputs CASCADE 
+Hibernate: 
+    
+    drop table if exists phase_outputs CASCADE 
+2021-05-22 07:29:01.253 DEBUG 21088 --- [  restartedMain] org.hibernate.SQL                        : 
+    
+    drop table if exists phase_steps CASCADE 
+Hibernate: 
+    
+    drop table if exists phase_steps CASCADE 
+2021-05-22 07:29:01.253 DEBUG 21088 --- [  restartedMain] org.hibernate.SQL                        : 
+    
+    drop table if exists process_definition CASCADE 
+Hibernate: 
+    
+    drop table if exists process_definition CASCADE 
+2021-05-22 07:29:01.254 DEBUG 21088 --- [  restartedMain] org.hibernate.SQL                        : 
+    
+    create table item (
+       type varchar(20) not null,
+        id bigint not null,
+        active boolean,
+        created_date timestamp,
+        deactivated_date timestamp,
+        name varchar(255),
+        sequence_number integer,
+        primary key (id)
+    )
+Hibernate: 
+    
+    create table item (
+       type varchar(20) not null,
+        id bigint not null,
+        active boolean,
+        created_date timestamp,
+        deactivated_date timestamp,
+        name varchar(255),
+        sequence_number integer,
+        primary key (id)
+    )
+2021-05-22 07:29:01.254 DEBUG 21088 --- [  restartedMain] org.hibernate.SQL                        : 
+    
+    create table phase (
+       id bigint not null,
+        active boolean,
+        created_date timestamp,
+        deactivated_date timestamp,
+        name varchar(255),
+        sequence_number integer,
+        description varchar(255),
+        process_id bigint,
+        primary key (id)
+    )
+Hibernate: 
+    
+    create table phase (
+       id bigint not null,
+        active boolean,
+        created_date timestamp,
+        deactivated_date timestamp,
+        name varchar(255),
+        sequence_number integer,
+        description varchar(255),
+        process_id bigint,
+        primary key (id)
+    )
+2021-05-22 07:29:01.255 DEBUG 21088 --- [  restartedMain] org.hibernate.SQL                        : 
+    
+    create table phase_approach (
+       phase_id bigint not null,
+        approach_id bigint not null
+    )
+Hibernate: 
+    
+    create table phase_approach (
+       phase_id bigint not null,
+        approach_id bigint not null
+    )
+2021-05-22 07:29:01.256 DEBUG 21088 --- [  restartedMain] org.hibernate.SQL                        : 
+    
+    create table phase_inputs (
+       phase_id bigint not null,
+        inputs_id bigint not null
+    )
+Hibernate: 
+    
+    create table phase_inputs (
+       phase_id bigint not null,
+        inputs_id bigint not null
+    )
+2021-05-22 07:29:01.256 DEBUG 21088 --- [  restartedMain] org.hibernate.SQL                        : 
+    
+    create table phase_objectives (
+       phase_id bigint not null,
+        objectives_id bigint not null
+    )
+Hibernate: 
+    
+    create table phase_objectives (
+       phase_id bigint not null,
+        objectives_id bigint not null
+    )
+2021-05-22 07:29:01.256 DEBUG 21088 --- [  restartedMain] org.hibernate.SQL                        : 
+    
+    create table phase_outputs (
+       phase_id bigint not null,
+        outputs_id bigint not null
+    )
+Hibernate: 
+    
+    create table phase_outputs (
+       phase_id bigint not null,
+        outputs_id bigint not null
+    )
+2021-05-22 07:29:01.257 DEBUG 21088 --- [  restartedMain] org.hibernate.SQL                        : 
+    
+    create table phase_steps (
+       phase_id bigint not null,
+        steps_id bigint not null
+    )
+Hibernate: 
+    
+    create table phase_steps (
+       phase_id bigint not null,
+        steps_id bigint not null
+    )
+2021-05-22 07:29:01.257 DEBUG 21088 --- [  restartedMain] org.hibernate.SQL                        : 
+    
+    create table process_definition (
+       id bigint not null,
+        active boolean,
+        created_date timestamp,
+        deactivated_date timestamp,
+        name varchar(255),
+        sequence_number integer,
+        primary key (id)
+    )
+Hibernate: 
+    
+    create table process_definition (
+       id bigint not null,
+        active boolean,
+        created_date timestamp,
+        deactivated_date timestamp,
+        name varchar(255),
+        sequence_number integer,
+        primary key (id)
+    )
+2021-05-22 07:29:01.257 DEBUG 21088 --- [  restartedMain] org.hibernate.SQL                        : 
+    
+    alter table phase_approach 
+       add constraint UK_m8yg932ksiidg9xr9odu2hkgn unique (approach_id)
+Hibernate: 
+    
+    alter table phase_approach 
+       add constraint UK_m8yg932ksiidg9xr9odu2hkgn unique (approach_id)
+2021-05-22 07:29:01.258 DEBUG 21088 --- [  restartedMain] org.hibernate.SQL                        : 
+    
+    alter table phase_inputs 
+       add constraint UK_rh500wbtlh246btu3phj0p14o unique (inputs_id)
+Hibernate: 
+    
+    alter table phase_inputs 
+       add constraint UK_rh500wbtlh246btu3phj0p14o unique (inputs_id)
+2021-05-22 07:29:01.258 DEBUG 21088 --- [  restartedMain] org.hibernate.SQL                        : 
+    
+    alter table phase_objectives 
+       add constraint UK_aht7gdbdd6oavtyl0pa8fnpw7 unique (objectives_id)
+Hibernate: 
+    
+    alter table phase_objectives 
+       add constraint UK_aht7gdbdd6oavtyl0pa8fnpw7 unique (objectives_id)
+2021-05-22 07:29:01.259 DEBUG 21088 --- [  restartedMain] org.hibernate.SQL                        : 
+    
+    alter table phase_outputs 
+       add constraint UK_cis9k50hw2jyvv50lb3vmjb4a unique (outputs_id)
+Hibernate: 
+    
+    alter table phase_outputs 
+       add constraint UK_cis9k50hw2jyvv50lb3vmjb4a unique (outputs_id)
+2021-05-22 07:29:01.259 DEBUG 21088 --- [  restartedMain] org.hibernate.SQL                        : 
+    
+    alter table phase_steps 
+       add constraint UK_jyycr73rqj9eyuur5lqjrsnir unique (steps_id)
+Hibernate: 
+    
+    alter table phase_steps 
+       add constraint UK_jyycr73rqj9eyuur5lqjrsnir unique (steps_id)
+2021-05-22 07:29:01.259 DEBUG 21088 --- [  restartedMain] org.hibernate.SQL                        : 
+    
+    alter table phase 
+       add constraint FK8ltfwy6emebvxba8do8hvv78b 
+       foreign key (process_id) 
+       references process_definition
+Hibernate: 
+    
+    alter table phase 
+       add constraint FK8ltfwy6emebvxba8do8hvv78b 
+       foreign key (process_id) 
+       references process_definition
+2021-05-22 07:29:01.260 DEBUG 21088 --- [  restartedMain] org.hibernate.SQL                        : 
+    
+    alter table phase_approach 
+       add constraint FKjssqk2xnnypr2lnuvw7qy5tx5 
+       foreign key (approach_id) 
+       references item
+Hibernate: 
+    
+    alter table phase_approach 
+       add constraint FKjssqk2xnnypr2lnuvw7qy5tx5 
+       foreign key (approach_id) 
+       references item
+2021-05-22 07:29:01.261 DEBUG 21088 --- [  restartedMain] org.hibernate.SQL                        : 
+    
+    alter table phase_approach 
+       add constraint FK61kr7s56a5t0xx09r1hu2rumg 
+       foreign key (phase_id) 
+       references phase
+Hibernate: 
+    
+    alter table phase_approach 
+       add constraint FK61kr7s56a5t0xx09r1hu2rumg 
+       foreign key (phase_id) 
+       references phase
+2021-05-22 07:29:01.263 DEBUG 21088 --- [  restartedMain] org.hibernate.SQL                        : 
+    
+    alter table phase_inputs 
+       add constraint FKabakysd50cyky5pbmw4i9iyfm 
+       foreign key (inputs_id) 
+       references item
+Hibernate: 
+    
+    alter table phase_inputs 
+       add constraint FKabakysd50cyky5pbmw4i9iyfm 
+       foreign key (inputs_id) 
+       references item
+2021-05-22 07:29:01.264 DEBUG 21088 --- [  restartedMain] org.hibernate.SQL                        : 
+    
+    alter table phase_inputs 
+       add constraint FKqufkp5y96mwoqm9e1mnbho2ul 
+       foreign key (phase_id) 
+       references phase
+Hibernate: 
+    
+    alter table phase_inputs 
+       add constraint FKqufkp5y96mwoqm9e1mnbho2ul 
+       foreign key (phase_id) 
+       references phase
+2021-05-22 07:29:01.265 DEBUG 21088 --- [  restartedMain] org.hibernate.SQL                        : 
+    
+    alter table phase_objectives 
+       add constraint FKimvyw7f5qengxym5om2nvfpfk 
+       foreign key (objectives_id) 
+       references item
+Hibernate: 
+    
+    alter table phase_objectives 
+       add constraint FKimvyw7f5qengxym5om2nvfpfk 
+       foreign key (objectives_id) 
+       references item
+2021-05-22 07:29:01.266 DEBUG 21088 --- [  restartedMain] org.hibernate.SQL                        : 
+    
+    alter table phase_objectives 
+       add constraint FKiqgjby1whm5eixjyqrm9wsdw9 
+       foreign key (phase_id) 
+       references phase
+Hibernate: 
+    
+    alter table phase_objectives 
+       add constraint FKiqgjby1whm5eixjyqrm9wsdw9 
+       foreign key (phase_id) 
+       references phase
+2021-05-22 07:29:01.267 DEBUG 21088 --- [  restartedMain] org.hibernate.SQL                        : 
+    
+    alter table phase_outputs 
+       add constraint FKm1cttoi0qm0u234qwr5iax24x 
+       foreign key (outputs_id) 
+       references item
+Hibernate: 
+    
+    alter table phase_outputs 
+       add constraint FKm1cttoi0qm0u234qwr5iax24x 
+       foreign key (outputs_id) 
+       references item
+2021-05-22 07:29:01.268 DEBUG 21088 --- [  restartedMain] org.hibernate.SQL                        : 
+    
+    alter table phase_outputs 
+       add constraint FKn4t3wdfxavlucgy3yq2esfwwo 
+       foreign key (phase_id) 
+       references phase
+Hibernate: 
+    
+    alter table phase_outputs 
+       add constraint FKn4t3wdfxavlucgy3yq2esfwwo 
+       foreign key (phase_id) 
+       references phase
+2021-05-22 07:29:01.269 DEBUG 21088 --- [  restartedMain] org.hibernate.SQL                        : 
+    
+    alter table phase_steps 
+       add constraint FKnnhcjvyd96j3nmt2r2d54pakc 
+       foreign key (steps_id) 
+       references item
+Hibernate: 
+    
+    alter table phase_steps 
+       add constraint FKnnhcjvyd96j3nmt2r2d54pakc 
+       foreign key (steps_id) 
+       references item
+2021-05-22 07:29:01.270 DEBUG 21088 --- [  restartedMain] org.hibernate.SQL                        : 
+    
+    alter table phase_steps 
+       add constraint FK1mmwkbqw2ymx5ou97pdxig0t0 
+       foreign key (phase_id) 
+       references phase
+Hibernate: 
+    
+    alter table phase_steps 
+       add constraint FK1mmwkbqw2ymx5ou97pdxig0t0 
+       foreign key (phase_id) 
+       references phase
+2021-05-22 07:29:01.272  INFO 21088 --- [  restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-05-22 07:29:01.272  INFO 21088 --- [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-05-22 07:29:01.280  INFO 21088 --- [  restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-05-22 07:29:01.337  WARN 21088 --- [  restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-05-22 07:29:01.394  INFO 21088 --- [  restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-05-22 07:29:01.398 DEBUG 21088 --- [  restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2021-05-22 07:29:01.404 DEBUG 21088 --- [  restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 3 mappings in 'requestMappingHandlerMapping'
+2021-05-22 07:29:01.417 DEBUG 21088 --- [  restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2021-05-22 07:29:01.422 DEBUG 21088 --- [  restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2021-05-22 07:29:01.520  INFO 21088 --- [  restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 13 endpoint(s) beneath base path '/actuator'
+2021-05-22 07:29:01.537  INFO 21088 --- [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-05-22 07:29:01.544  INFO 21088 --- [  restartedMain] o.p.d.ProcessCatalogApplication          : Started ProcessCatalogApplication in 0.735 seconds (JVM running for 208.447)
+2021-05-22 07:29:01.548 DEBUG 21088 --- [  restartedMain] org.hibernate.SQL                        : 
+    select
+        processdef0_.id as id1_7_1_,
+        processdef0_.active as active2_7_1_,
+        processdef0_.created_date as created_3_7_1_,
+        processdef0_.deactivated_date as deactiva4_7_1_,
+        processdef0_.name as name5_7_1_,
+        processdef0_.sequence_number as sequence6_7_1_,
+        phase1_.process_id as process_8_1_3_,
+        phase1_.id as id1_1_3_,
+        phase1_.id as id1_1_0_,
+        phase1_.active as active2_1_0_,
+        phase1_.created_date as created_3_1_0_,
+        phase1_.deactivated_date as deactiva4_1_0_,
+        phase1_.name as name5_1_0_,
+        phase1_.sequence_number as sequence6_1_0_,
+        phase1_.description as descript7_1_0_,
+        phase1_.process_id as process_8_1_0_ 
+    from
+        process_definition processdef0_ 
+    left outer join
+        phase phase1_ 
+            on processdef0_.id=phase1_.process_id 
+    where
+        processdef0_.id=?
+Hibernate: 
+    select
+        processdef0_.id as id1_7_1_,
+        processdef0_.active as active2_7_1_,
+        processdef0_.created_date as created_3_7_1_,
+        processdef0_.deactivated_date as deactiva4_7_1_,
+        processdef0_.name as name5_7_1_,
+        processdef0_.sequence_number as sequence6_7_1_,
+        phase1_.process_id as process_8_1_3_,
+        phase1_.id as id1_1_3_,
+        phase1_.id as id1_1_0_,
+        phase1_.active as active2_1_0_,
+        phase1_.created_date as created_3_1_0_,
+        phase1_.deactivated_date as deactiva4_1_0_,
+        phase1_.name as name5_1_0_,
+        phase1_.sequence_number as sequence6_1_0_,
+        phase1_.description as descript7_1_0_,
+        phase1_.process_id as process_8_1_0_ 
+    from
+        process_definition processdef0_ 
+    left outer join
+        phase phase1_ 
+            on processdef0_.id=phase1_.process_id 
+    where
+        processdef0_.id=?
+2021-05-22 07:29:01.548 TRACE 21088 --- [  restartedMain] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [1]
+2021-05-22 07:29:01.549 DEBUG 21088 --- [  restartedMain] org.hibernate.SQL                        : 
+    select
+        phase0_.id as id1_1_0_,
+        phase0_.active as active2_1_0_,
+        phase0_.created_date as created_3_1_0_,
+        phase0_.deactivated_date as deactiva4_1_0_,
+        phase0_.name as name5_1_0_,
+        phase0_.sequence_number as sequence6_1_0_,
+        phase0_.description as descript7_1_0_,
+        phase0_.process_id as process_8_1_0_ 
+    from
+        phase phase0_ 
+    where
+        phase0_.id=?
+Hibernate: 
+    select
+        phase0_.id as id1_1_0_,
+        phase0_.active as active2_1_0_,
+        phase0_.created_date as created_3_1_0_,
+        phase0_.deactivated_date as deactiva4_1_0_,
+        phase0_.name as name5_1_0_,
+        phase0_.sequence_number as sequence6_1_0_,
+        phase0_.description as descript7_1_0_,
+        phase0_.process_id as process_8_1_0_ 
+    from
+        phase phase0_ 
+    where
+        phase0_.id=?
+2021-05-22 07:29:01.550 TRACE 21088 --- [  restartedMain] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [1]
+2021-05-22 07:29:01.551 DEBUG 21088 --- [  restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        process_definition
+        (active, created_date, deactivated_date, name, sequence_number, id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        process_definition
+        (active, created_date, deactivated_date, name, sequence_number, id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2021-05-22 07:29:01.551 TRACE 21088 --- [  restartedMain] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BOOLEAN] - [true]
+2021-05-22 07:29:01.551 TRACE 21088 --- [  restartedMain] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [TIMESTAMP] - [Sat May 22 07:29:01 IST 2021]
+2021-05-22 07:29:01.551 TRACE 21088 --- [  restartedMain] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [TIMESTAMP] - [null]
+2021-05-22 07:29:01.551 TRACE 21088 --- [  restartedMain] o.h.type.descriptor.sql.BasicBinder      : binding parameter [4] as [VARCHAR] - [togaf]
+2021-05-22 07:29:01.551 TRACE 21088 --- [  restartedMain] o.h.type.descriptor.sql.BasicBinder      : binding parameter [5] as [INTEGER] - [1]
+2021-05-22 07:29:01.551 TRACE 21088 --- [  restartedMain] o.h.type.descriptor.sql.BasicBinder      : binding parameter [6] as [BIGINT] - [1]
+2021-05-22 07:29:01.552 DEBUG 21088 --- [  restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        phase
+        (active, created_date, deactivated_date, name, sequence_number, description, process_id, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        phase
+        (active, created_date, deactivated_date, name, sequence_number, description, process_id, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+2021-05-22 07:29:01.552 TRACE 21088 --- [  restartedMain] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BOOLEAN] - [null]
+2021-05-22 07:29:01.552 TRACE 21088 --- [  restartedMain] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [TIMESTAMP] - [null]
+2021-05-22 07:29:01.552 TRACE 21088 --- [  restartedMain] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [TIMESTAMP] - [null]
+2021-05-22 07:29:01.552 TRACE 21088 --- [  restartedMain] o.h.type.descriptor.sql.BasicBinder      : binding parameter [4] as [VARCHAR] - [Preliminary]
+2021-05-22 07:29:01.552 TRACE 21088 --- [  restartedMain] o.h.type.descriptor.sql.BasicBinder      : binding parameter [5] as [INTEGER] - [null]
+2021-05-22 07:29:01.552 TRACE 21088 --- [  restartedMain] o.h.type.descriptor.sql.BasicBinder      : binding parameter [6] as [VARCHAR] - [null]
+2021-05-22 07:29:01.552 TRACE 21088 --- [  restartedMain] o.h.type.descriptor.sql.BasicBinder      : binding parameter [7] as [BIGINT] - [1]
+2021-05-22 07:29:01.552 TRACE 21088 --- [  restartedMain] o.h.type.descriptor.sql.BasicBinder      : binding parameter [8] as [BIGINT] - [1]
+2021-05-22 07:29:01.554  INFO 21088 --- [  restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+
+
+2021-05-22 07:31:17.949  INFO 21088 --- [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-05-22 07:31:17.950  INFO 21088 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-05-22 07:31:17.950 DEBUG 21088 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2021-05-22 07:31:17.950 DEBUG 21088 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2021-05-22 07:31:17.950 DEBUG 21088 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2021-05-22 07:31:17.951 DEBUG 21088 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@624a1424
+2021-05-22 07:31:17.952 DEBUG 21088 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@6ae87e6d
+2021-05-22 07:31:17.952 DEBUG 21088 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2021-05-22 07:31:17.952  INFO 21088 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2021-05-22 07:31:17.960 DEBUG 21088 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/actuator", parameters={}
+2021-05-22 07:31:17.969 DEBUG 21088 --- [nio-8080-exec-1] s.b.a.e.w.s.WebMvcEndpointHandlerMapping : Mapped to Actuator root web endpoint
+2021-05-22 07:31:17.982 DEBUG 21088 --- [nio-8080-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/vnd.spring-boot.actuator.v3+json;q=0.8', given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.9, */*;q=0.8] and supported [application/vnd.spring-boot.actuator.v3+json, application/vnd.spring-boot.actuator.v2+json, application/json]
+2021-05-22 07:31:17.985 DEBUG 21088 --- [nio-8080-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Writing [{_links={self=[Link@2e901f1d href = 'http://localhost:8080/actuator'], beans=[Link@1b089dd3 href = ' (truncated)...]
+2021-05-22 07:31:17.998 DEBUG 21088 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-05-22 07:31:18.153 DEBUG 21088 --- [nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/favicon.ico", parameters={}
+2021-05-22 07:31:18.160 DEBUG 21088 --- [nio-8080-exec-2] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/], Classpath [resources/], Classpath [static/], Classpath [public/], ServletContext [/]]
+2021-05-22 07:31:18.163 DEBUG 21088 --- [nio-8080-exec-2] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2021-05-22 07:31:18.164 DEBUG 21088 --- [nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2021-05-22 07:31:18.166 DEBUG 21088 --- [nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for GET "/error", parameters={}
+2021-05-22 07:31:18.168 DEBUG 21088 --- [nio-8080-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2021-05-22 07:31:18.172 DEBUG 21088 --- [nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json;q=0.8', given [image/avif, image/webp, image/apng, image/svg+xml, image/*, */*;q=0.8] and supported [application/json, application/*+json, application/json, application/*+json]
+2021-05-22 07:31:18.172 DEBUG 21088 --- [nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=Sat May 22 07:31:18 IST 2021, status=404, error=Not Found, message=No message available,  (truncated)...]
+2021-05-22 07:31:18.184 DEBUG 21088 --- [nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 404
+2021-05-22 07:32:23.118 DEBUG 21088 --- [nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/actuator/mappings", parameters={}
+2021-05-22 07:32:23.119 DEBUG 21088 --- [nio-8080-exec-5] s.b.a.e.w.s.WebMvcEndpointHandlerMapping : Mapped to Actuator web endpoint 'mappings'
+2021-05-22 07:32:23.128 DEBUG 21088 --- [nio-8080-exec-5] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/vnd.spring-boot.actuator.v3+json;q=0.8', given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.9, */*;q=0.8] and supported [application/vnd.spring-boot.actuator.v3+json, application/vnd.spring-boot.actuator.v2+json, application/json]
+2021-05-22 07:32:23.129 DEBUG 21088 --- [nio-8080-exec-5] m.m.a.RequestResponseBodyMethodProcessor : Writing [org.springframework.boot.actuate.web.mappings.MappingsEndpoint$ApplicationMappings@2a4e43a4]
+2021-05-22 07:32:23.143 DEBUG 21088 --- [nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK

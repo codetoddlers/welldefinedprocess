@@ -1,0 +1,29 @@
+debug: true
+logging:
+  level:
+    org:
+      hibernate:
+        SQL: TRACE
+        type:
+          descriptor:
+            sql:
+              BasicBinder: TRACE
+      springframework:
+        jdbc:
+          core:
+            JdbcTemplate: TRACE
+            StatementCreatorUtils: TRACE
+spring:
+  h2:
+    console:
+      path: /h2-console
+      settings:
+        trace: false
+        web-allow-others: false
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    properties:
+      hibernate:
+        format_sql: true
+    show-sql: true

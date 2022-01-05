@@ -1,0 +1,343 @@
+http://localhost:8080/
+{
+  "_links" : {
+    "processDef" : {
+      "href" : "http://localhost:8080/processDef{?page,size,sort}",
+      "templated" : true
+    },
+    "profile" : {
+      "href" : "http://localhost:8080/profile"
+    }
+  }
+}
+
+#http://localhost:8080/process/list
+[ {
+  "id" : 1,
+  "sequenceNumber" : 1,
+  "name" : "togaf",
+  "active" : true,
+  "createdDate" : "2021-05-22T01:59:01.545+00:00",
+  "deactivatedDate" : null,
+  "phase" : [ {
+    "id" : 1,
+    "sequenceNumber" : null,
+    "name" : "Preliminary",
+    "active" : null,
+    "createdDate" : null,
+    "deactivatedDate" : null,
+    "description" : null,
+    "objectives" : [ ],
+    "inputs" : [ ],
+    "steps" : [ ],
+    "outputs" : [ ],
+    "approach" : [ ]
+  } ]
+} ]
+#http://localhost:8080/profile
+{
+  "_links" : {
+    "self" : {
+      "href" : "http://localhost:8080/profile"
+    },
+    "processDef" : {
+      "href" : "http://localhost:8080/profile/processDef"
+    }
+  }
+}
+#http://localhost:8080/profile/processDef
+{ "alps" : { "version" : "1.0", "descriptor" : [ { "id" : "processDefinition-representation", "href" : "http://localhost:8080/profile/processDef", "descriptor" : [ { "name" : "sequenceNumber", "type" : "SEMANTIC" }, { "name" : "name", "type" : "SEMANTIC" }, { "name" : "active", "type" : "SEMANTIC" }, { "name" : "createdDate", "type" : "SEMANTIC" }, { "name" : "deactivatedDate", "type" : "SEMANTIC" } ] }, { "id" : "create-processDef", "name" : "processDef", "type" : "UNSAFE", "descriptor" : [ ], "rt" : "#processDefinition-representation" }, { "id" : "get-processDef", "name" : "processDef", "type" : "SAFE", "descriptor" : [ { "name" : "page", "type" : "SEMANTIC", "doc" : { "format" : "TEXT", "value" : "The page to return." } }, { "name" : "size", "type" : "SEMANTIC", "doc" : { "format" : "TEXT", "value" : "The size of the page to return." } }, { "name" : "sort", "type" : "SEMANTIC", "doc" : { "format" : "TEXT", "value" : "The sorting criteria to use to calculate the content of the page." } } ], "rt" : "#processDefinition-representation" }, { "id" : "patch-processDefinition", "name" : "processDefinition", "type" : "UNSAFE", "descriptor" : [ ], "rt" : "#processDefinition-representation" }, { "id" : "delete-processDefinition", "name" : "processDefinition", "type" : "IDEMPOTENT", "descriptor" : [ ], "rt" : "#processDefinition-representation" }, { "id" : "update-processDefinition", "name" : "processDefinition", "type" : "IDEMPOTENT", "descriptor" : [ ], "rt" : "#processDefinition-representation" }, { "id" : "get-processDefinition", "name" : "processDefinition", "type" : "SAFE", "descriptor" : [ ], "rt" : "#processDefinition-representation" } ] } }
+#http://localhost:8080/processDef?page=1,size=100,sort=desc
+{
+  "_embedded" : {
+    "processDef" : [ {
+      "sequenceNumber" : 1,
+      "name" : "togaf",
+      "active" : true,
+      "createdDate" : "2021-05-22T01:59:01.545+00:00",
+      "deactivatedDate" : null,
+      "phase" : [ {
+        "sequenceNumber" : null,
+        "name" : "Preliminary",
+        "active" : null,
+        "createdDate" : null,
+        "deactivatedDate" : null,
+        "description" : null,
+        "objectives" : [ ],
+        "inputs" : [ ],
+        "steps" : [ ],
+        "outputs" : [ ],
+        "approach" : [ ],
+        "_links" : {
+          "process" : {
+            "href" : "http://localhost:8080/processDef/1"
+          }
+        }
+      } ],
+      "_links" : {
+        "self" : {
+          "href" : "http://localhost:8080/processDef/1"
+        },
+        "processDefinition" : {
+          "href" : "http://localhost:8080/processDef/1"
+        }
+      }
+    } ]
+  },
+  "_links" : {
+    "self" : {
+      "href" : "http://localhost:8080/processDef?page=1,size=100,sort=desc"
+    },
+    "profile" : {
+      "href" : "http://localhost:8080/profile/processDef"
+    }
+  },
+  "page" : {
+    "size" : 20,
+    "totalElements" : 1,
+    "totalPages" : 1,
+    "number" : 0
+  }
+}
+2021-05-22 07:49:03.999 DEBUG 21088 --- [nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/processDef?page=1,size=100,sort=desc", parameters={masked}
+2021-05-22 07:49:04.002 DEBUG 21088 --- [nio-8080-exec-5] org.hibernate.SQL                        : 
+    select
+        processdef0_.id as id1_7_,
+        processdef0_.active as active2_7_,
+        processdef0_.created_date as created_3_7_,
+        processdef0_.deactivated_date as deactiva4_7_,
+        processdef0_.name as name5_7_,
+        processdef0_.sequence_number as sequence6_7_ 
+    from
+        process_definition processdef0_ limit ?
+Hibernate: 
+    select
+        processdef0_.id as id1_7_,
+        processdef0_.active as active2_7_,
+        processdef0_.created_date as created_3_7_,
+        processdef0_.deactivated_date as deactiva4_7_,
+        processdef0_.name as name5_7_,
+        processdef0_.sequence_number as sequence6_7_ 
+    from
+        process_definition processdef0_ limit ?
+2021-05-22 07:49:04.004 DEBUG 21088 --- [nio-8080-exec-5] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/hal+json;q=0.8', given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.9, */*;q=0.8] and supported [application/hal+json]
+2021-05-22 07:49:04.005 DEBUG 21088 --- [nio-8080-exec-5] org.hibernate.SQL                        : 
+    select
+        phase0_.process_id as process_8_1_0_,
+        phase0_.id as id1_1_0_,
+        phase0_.id as id1_1_1_,
+        phase0_.active as active2_1_1_,
+        phase0_.created_date as created_3_1_1_,
+        phase0_.deactivated_date as deactiva4_1_1_,
+        phase0_.name as name5_1_1_,
+        phase0_.sequence_number as sequence6_1_1_,
+        phase0_.description as descript7_1_1_,
+        phase0_.process_id as process_8_1_1_ 
+    from
+        phase phase0_ 
+    where
+        phase0_.process_id=?
+Hibernate: 
+    select
+        phase0_.process_id as process_8_1_0_,
+        phase0_.id as id1_1_0_,
+        phase0_.id as id1_1_1_,
+        phase0_.active as active2_1_1_,
+        phase0_.created_date as created_3_1_1_,
+        phase0_.deactivated_date as deactiva4_1_1_,
+        phase0_.name as name5_1_1_,
+        phase0_.sequence_number as sequence6_1_1_,
+        phase0_.description as descript7_1_1_,
+        phase0_.process_id as process_8_1_1_ 
+    from
+        phase phase0_ 
+    where
+        phase0_.process_id=?
+2021-05-22 07:49:04.005 TRACE 21088 --- [nio-8080-exec-5] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [1]
+2021-05-22 07:49:04.006 DEBUG 21088 --- [nio-8080-exec-5] org.hibernate.SQL                        : 
+    select
+        objectives0_.phase_id as phase_id1_4_0_,
+        objectives0_.objectives_id as objectiv2_4_0_,
+        item1_.id as id2_0_1_,
+        item1_.active as active3_0_1_,
+        item1_.created_date as created_4_0_1_,
+        item1_.deactivated_date as deactiva5_0_1_,
+        item1_.name as name6_0_1_,
+        item1_.sequence_number as sequence7_0_1_,
+        item1_.type as type1_0_1_ 
+    from
+        phase_objectives objectives0_ 
+    inner join
+        item item1_ 
+            on objectives0_.objectives_id=item1_.id 
+    where
+        objectives0_.phase_id=?
+Hibernate: 
+    select
+        objectives0_.phase_id as phase_id1_4_0_,
+        objectives0_.objectives_id as objectiv2_4_0_,
+        item1_.id as id2_0_1_,
+        item1_.active as active3_0_1_,
+        item1_.created_date as created_4_0_1_,
+        item1_.deactivated_date as deactiva5_0_1_,
+        item1_.name as name6_0_1_,
+        item1_.sequence_number as sequence7_0_1_,
+        item1_.type as type1_0_1_ 
+    from
+        phase_objectives objectives0_ 
+    inner join
+        item item1_ 
+            on objectives0_.objectives_id=item1_.id 
+    where
+        objectives0_.phase_id=?
+2021-05-22 07:49:04.006 TRACE 21088 --- [nio-8080-exec-5] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [1]
+2021-05-22 07:49:04.006 DEBUG 21088 --- [nio-8080-exec-5] org.hibernate.SQL                        : 
+    select
+        inputs0_.phase_id as phase_id1_3_0_,
+        inputs0_.inputs_id as inputs_i2_3_0_,
+        item1_.id as id2_0_1_,
+        item1_.active as active3_0_1_,
+        item1_.created_date as created_4_0_1_,
+        item1_.deactivated_date as deactiva5_0_1_,
+        item1_.name as name6_0_1_,
+        item1_.sequence_number as sequence7_0_1_,
+        item1_.type as type1_0_1_ 
+    from
+        phase_inputs inputs0_ 
+    inner join
+        item item1_ 
+            on inputs0_.inputs_id=item1_.id 
+    where
+        inputs0_.phase_id=?
+Hibernate: 
+    select
+        inputs0_.phase_id as phase_id1_3_0_,
+        inputs0_.inputs_id as inputs_i2_3_0_,
+        item1_.id as id2_0_1_,
+        item1_.active as active3_0_1_,
+        item1_.created_date as created_4_0_1_,
+        item1_.deactivated_date as deactiva5_0_1_,
+        item1_.name as name6_0_1_,
+        item1_.sequence_number as sequence7_0_1_,
+        item1_.type as type1_0_1_ 
+    from
+        phase_inputs inputs0_ 
+    inner join
+        item item1_ 
+            on inputs0_.inputs_id=item1_.id 
+    where
+        inputs0_.phase_id=?
+2021-05-22 07:49:04.006 TRACE 21088 --- [nio-8080-exec-5] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [1]
+2021-05-22 07:49:04.006 DEBUG 21088 --- [nio-8080-exec-5] org.hibernate.SQL                        : 
+    select
+        steps0_.phase_id as phase_id1_6_0_,
+        steps0_.steps_id as steps_id2_6_0_,
+        item1_.id as id2_0_1_,
+        item1_.active as active3_0_1_,
+        item1_.created_date as created_4_0_1_,
+        item1_.deactivated_date as deactiva5_0_1_,
+        item1_.name as name6_0_1_,
+        item1_.sequence_number as sequence7_0_1_,
+        item1_.type as type1_0_1_ 
+    from
+        phase_steps steps0_ 
+    inner join
+        item item1_ 
+            on steps0_.steps_id=item1_.id 
+    where
+        steps0_.phase_id=?
+Hibernate: 
+    select
+        steps0_.phase_id as phase_id1_6_0_,
+        steps0_.steps_id as steps_id2_6_0_,
+        item1_.id as id2_0_1_,
+        item1_.active as active3_0_1_,
+        item1_.created_date as created_4_0_1_,
+        item1_.deactivated_date as deactiva5_0_1_,
+        item1_.name as name6_0_1_,
+        item1_.sequence_number as sequence7_0_1_,
+        item1_.type as type1_0_1_ 
+    from
+        phase_steps steps0_ 
+    inner join
+        item item1_ 
+            on steps0_.steps_id=item1_.id 
+    where
+        steps0_.phase_id=?
+2021-05-22 07:49:04.006 TRACE 21088 --- [nio-8080-exec-5] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [1]
+2021-05-22 07:49:04.007 DEBUG 21088 --- [nio-8080-exec-5] org.hibernate.SQL                        : 
+    select
+        outputs0_.phase_id as phase_id1_5_0_,
+        outputs0_.outputs_id as outputs_2_5_0_,
+        item1_.id as id2_0_1_,
+        item1_.active as active3_0_1_,
+        item1_.created_date as created_4_0_1_,
+        item1_.deactivated_date as deactiva5_0_1_,
+        item1_.name as name6_0_1_,
+        item1_.sequence_number as sequence7_0_1_,
+        item1_.type as type1_0_1_ 
+    from
+        phase_outputs outputs0_ 
+    inner join
+        item item1_ 
+            on outputs0_.outputs_id=item1_.id 
+    where
+        outputs0_.phase_id=?
+Hibernate: 
+    select
+        outputs0_.phase_id as phase_id1_5_0_,
+        outputs0_.outputs_id as outputs_2_5_0_,
+        item1_.id as id2_0_1_,
+        item1_.active as active3_0_1_,
+        item1_.created_date as created_4_0_1_,
+        item1_.deactivated_date as deactiva5_0_1_,
+        item1_.name as name6_0_1_,
+        item1_.sequence_number as sequence7_0_1_,
+        item1_.type as type1_0_1_ 
+    from
+        phase_outputs outputs0_ 
+    inner join
+        item item1_ 
+            on outputs0_.outputs_id=item1_.id 
+    where
+        outputs0_.phase_id=?
+2021-05-22 07:49:04.007 TRACE 21088 --- [nio-8080-exec-5] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [1]
+2021-05-22 07:49:04.007 DEBUG 21088 --- [nio-8080-exec-5] org.hibernate.SQL                        : 
+    select
+        approach0_.phase_id as phase_id1_2_0_,
+        approach0_.approach_id as approach2_2_0_,
+        item1_.id as id2_0_1_,
+        item1_.active as active3_0_1_,
+        item1_.created_date as created_4_0_1_,
+        item1_.deactivated_date as deactiva5_0_1_,
+        item1_.name as name6_0_1_,
+        item1_.sequence_number as sequence7_0_1_,
+        item1_.type as type1_0_1_ 
+    from
+        phase_approach approach0_ 
+    inner join
+        item item1_ 
+            on approach0_.approach_id=item1_.id 
+    where
+        approach0_.phase_id=?
+Hibernate: 
+    select
+        approach0_.phase_id as phase_id1_2_0_,
+        approach0_.approach_id as approach2_2_0_,
+        item1_.id as id2_0_1_,
+        item1_.active as active3_0_1_,
+        item1_.created_date as created_4_0_1_,
+        item1_.deactivated_date as deactiva5_0_1_,
+        item1_.name as name6_0_1_,
+        item1_.sequence_number as sequence7_0_1_,
+        item1_.type as type1_0_1_ 
+    from
+        phase_approach approach0_ 
+    inner join
+        item item1_ 
+            on approach0_.approach_id=item1_.id 
+    where
+        approach0_.phase_id=?
+2021-05-22 07:49:04.007 TRACE 21088 --- [nio-8080-exec-5] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [1]
+2021-05-22 07:49:04.007 DEBUG 21088 --- [nio-8080-exec-5] m.m.a.RequestResponseBodyMethodProcessor : Writing [PagedModel { content: [EntityModel { content: ProcessDefinition(phase=[Phase(name=Preliminary, descr (truncated)...]
+2021-05-22 07:49:04.011 DEBUG 21088 --- [nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK

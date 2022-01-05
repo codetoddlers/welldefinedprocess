@@ -1,0 +1,98 @@
+2021-11-28 21:28:51.180 DEBUG 20296 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/", parameters={}
+2021-11-28 21:28:51.273 DEBUG 20296 --- [nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/hal+json;q=0.8', given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.9, */*;q=0.8] and supported [application/hal+json]
+2021-11-28 21:28:51.285 DEBUG 20296 --- [nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [links: [<http://localhost:8080/wellDefinedProcesses{?page,size,sort}>;rel="wellDefinedProcesses", <h (truncated)...]
+2021-11-28 21:28:51.350 DEBUG 20296 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-11-28 21:28:51.439 DEBUG 20296 --- [nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/favicon.ico", parameters={}
+2021-11-28 21:28:51.449 DEBUG 20296 --- [nio-8080-exec-2] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/], Classpath [resources/], Classpath [static/], Classpath [public/], ServletContext [/]]
+2021-11-28 21:28:51.457 DEBUG 20296 --- [nio-8080-exec-2] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2021-11-28 21:28:51.457 DEBUG 20296 --- [nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2021-11-28 21:28:51.462 DEBUG 20296 --- [nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for GET "/error", parameters={}
+2021-11-28 21:28:51.467 DEBUG 20296 --- [nio-8080-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2021-11-28 21:28:51.479 DEBUG 20296 --- [nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json;q=0.8', given [image/avif, image/webp, image/apng, image/svg+xml, image/*, */*;q=0.8] and supported [application/json, application/*+json, application/json, application/*+json]
+2021-11-28 21:28:51.480 DEBUG 20296 --- [nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=Sun Nov 28 21:28:51 IST 2021, status=404, error=Not Found, message=No message available,  (truncated)...]
+2021-11-28 21:28:51.516 DEBUG 20296 --- [nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 404
+
+
+{
+  "_links" : {
+    "wellDefinedProcesses" : {
+      "href" : "http://localhost:8080/wellDefinedProcesses{?page,size,sort}",
+      "templated" : true
+    },
+    "profile" : {
+      "href" : "http://localhost:8080/profile"
+    }
+  }
+}
+
+
+============================================================================
+
+http://localhost:8080/wellDefinedProcesses
+
+{
+  "_embedded" : {
+    "wellDefinedProcesses" : [ {
+      "sequenceNumber" : 1,
+      "name" : "welldefinedprocess1",
+      "active" : true,
+      "createdDate" : "2021-11-28T15:59:49.894+00:00",
+      "deactivatedDate" : null,
+      "phase" : [ {
+        "sequenceNumber" : null,
+        "name" : "phase1",
+        "active" : null,
+        "createdDate" : null,
+        "deactivatedDate" : null,
+        "description" : null,
+        "objectives" : [ ],
+        "inputs" : [ ],
+        "steps" : [ ],
+        "outputs" : [ ],
+        "approach" : [ {
+          "sequenceNumber" : null,
+          "name" : "approach20211128+0530",
+          "active" : true,
+          "createdDate" : "2021-11-28T15:59:49.894+00:00",
+          "deactivatedDate" : null
+        }, {
+          "sequenceNumber" : null,
+          "name" : "approach20211128+0530",
+          "active" : true,
+          "createdDate" : "2021-11-28T15:59:49.894+00:00",
+          "deactivatedDate" : null
+        } ],
+        "_links" : {
+          "welldefinedprocess" : {
+            "href" : "http://localhost:8080/wellDefinedProcesses/1"
+          }
+        }
+      } ],
+      "_links" : {
+        "self" : {
+          "href" : "http://localhost:8080/wellDefinedProcesses/1"
+        },
+        "wellDefinedProcess" : {
+          "href" : "http://localhost:8080/wellDefinedProcesses/1"
+        }
+      }
+    } ]
+  },
+  "_links" : {
+    "self" : {
+      "href" : "http://localhost:8080/wellDefinedProcesses"
+    },
+    "profile" : {
+      "href" : "http://localhost:8080/profile/wellDefinedProcesses"
+    },
+    "search" : {
+      "href" : "http://localhost:8080/wellDefinedProcesses/search"
+    }
+  },
+  "page" : {
+    "size" : 20,
+    "totalElements" : 1,
+    "totalPages" : 1,
+    "number" : 0
+  }
+}
