@@ -33,7 +33,7 @@ public class WellDefinedProcessController {
 	}
 
 	@GetMapping("/{id}")
-	private Mono<WellDefinedProcess> getEmployeeById(@PathVariable Long id) {
+	private Mono<WellDefinedProcess> getWellDefinedProcessById(@PathVariable Long id) {
 		if(id>0) {
 			return Mono.just(processRepository.findById(id).stream().collect(Collectors.toUnmodifiableList()).get(0));
 		}
@@ -41,7 +41,7 @@ public class WellDefinedProcessController {
 	}
 
 	@GetMapping
-	private Flux<WellDefinedProcess> getAllEmployees() {
+	private Flux<WellDefinedProcess> getAllWellDefinedProcess() {
 		return Flux.fromIterable(processRepository.findAll());
 	}
 }
